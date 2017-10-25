@@ -50,9 +50,8 @@ body {
     margin: 10px 10px 10px 10px;
     height: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .navItem {
@@ -70,16 +69,31 @@ body {
 
 .contentBox {
     
-    margin: 10px;
-    width: 200px;
+    background-color: beige;
+    width: 50%;
+    padding 10px;
     height: 200px;
     text-align: center;
+    display: flex;
+    transition: 0.5s;
+}
+
+.contentBox:Hover {
+    
+    width: 100%;
+}
+
+.boxLabel {
+    
+    width 200px;
+    text-align: center;
+    
 }
 
 #gameName {
     
     height: 100%;
-    content: url("images/samplePreview.jpg");
+    content: url("images/logo.png");
 }
 
 @font-face {
