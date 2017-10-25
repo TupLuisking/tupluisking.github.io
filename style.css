@@ -1,0 +1,89 @@
+html {
+    
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-family: pixelFont;
+}
+
+body {
+    
+    background: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#logo {
+    
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-self: flex-start;
+}
+
+#nav {
+    
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-between;
+}
+
+#navbar {
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: center;
+}
+
+#content {
+    
+    margin: 10px 10px 10px 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.navItem {
+    
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-family: pixelFont;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameBox {
+    
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+#gameName {
+    
+    height: 100%;
+    content: url("images/samplePreview.jpg");
+}
+
+@font-face {
+    
+    font-family: pixelFont;
+    src: url("fonts/OldSchoolAdventures.ttf");
+}
