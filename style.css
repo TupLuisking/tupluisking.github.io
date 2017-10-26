@@ -1,13 +1,14 @@
 html {
     
     display: flex;
+    height:100%;
     width: 100%;
     font-family: pixelFont;
 }
 
 body {
     
-    background: #FFFFFF;
+    background: #333333;
     width: 100%;
     height: 100%;
     margin: 0px;
@@ -16,38 +17,31 @@ body {
     justify-content: flex-start;
 }
 
-#logoContainer {
-    
-    height: inherit;
-}
-
 #logo {
     
     padding-left: 10px;
     padding-right: 10px;
-    background: black;
-    height: inherit;
+    height: 100%;
     display: flex;
-    align-self: flex-start;
+    align-self: center;
 }
 
 #nav {
     
-    margin: 0px;
     display: flex;
     flex-direction: row;
-    height: 50px;
+    height: 69px;
     width: 100%;
     justify-content: space-between;
-    background-color: #000000;
-    position: fixed;
-    top: 0;
+    background-color: #333333;
+    //position: fixed;
+    //top: 0;
 }
 
 #navbar {
 
     margin: 0;
-    padding: 0;
+    padding-right: 10px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -55,12 +49,13 @@ body {
     align-items: center;
 }
 
-#content {
+.content {
     
-    #margin: 10px 10px 10px 10px;
+    height: auto;
+    width: auto;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: black;
 }
 
 .navItem {
@@ -80,6 +75,105 @@ body {
 .navItem:Hover {
     
     color: #AAAAAA;
+}
+
+#homePage {
+    
+    padding: 25px;
+    
+    text-align: center;
+    background: #7fbf7f;
+}
+
+#homePage h {
+    
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+#homePicture {
+    
+    height:300px;
+    background: url("images/Tup.png") no-repeat center;
+    background-size: contain;
+    display: block;
+}
+
+#aboutPage {
+    
+    padding: 25px;
+    
+    text-align: center;
+    background: #7fbfbf;
+}
+
+#aboutPage h {
+    
+    text-align: center;
+    font-size: 30px;
+    padding: 25px;
+}
+
+#portraitContainer {
+    
+    width: 169px;
+    height: 169px;
+    border-radius: 50%;
+    border: 10px solid black;
+    background: white;
+}
+
+#portrait {
+    
+    width: 100%;
+    height: 100%;
+    background: url("images/portrait-normal.png") no-repeat center;
+    background-size: contain;
+    border-radius: 50%;
+}
+
+#portrait:Hover {
+    
+    background: url("images/portrait-pixel.png") no-repeat center;
+    background-size: contain;
+}
+
+#artPage {
+    
+    padding: 25px;
+    
+    text-align: center;
+    background: #a1d66e;
+}
+
+#gamesPage {
+    
+    padding: 25px;
+    
+    text-align: center;
+    background: #d6a36e;
+}
+
+#contactPage {
+    
+    padding: 25px;
+    
+    text-align: center;
+    background: #a18c76;
+}
+
+.columnContainer {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rowContainer {
+    
+    display: flex;
+    flex-direction: row;
 }
 
 @font-face {
