@@ -2,7 +2,6 @@ html {
     
     display: flex;
     width: 100%;
-    height: 100%;
     font-family: pixelFont;
 }
 
@@ -17,21 +16,32 @@ body {
     justify-content: flex-start;
 }
 
+#logoContainer {
+    
+    height: inherit;
+}
+
 #logo {
     
-    padding: 0;
-    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: black;
+    height: inherit;
     display: flex;
     align-self: flex-start;
 }
 
 #nav {
     
-    padding: 10px;
+    margin: 0px;
     display: flex;
     flex-direction: row;
     height: 50px;
+    width: 100%;
     justify-content: space-between;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
 }
 
 #navbar {
@@ -47,53 +57,29 @@ body {
 
 #content {
     
-    margin: 10px 10px 10px 10px;
-    height: 100%;
+    #margin: 10px 10px 10px 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    color: white;
 }
 
 .navItem {
     
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     height: 100%;
     display: flex;
     text-align: center;
-    color: black;
+    color: white;
     text-decoration: none;
     font-family: pixelFont;
     justify-content: center;
     align-items: center;
 }
 
-.contentBox {
+.navItem:Hover {
     
-    background-color: beige;
-    width: 50%;
-    padding 10px;
-    height: 200px;
-    text-align: center;
-    display: flex;
-    transition: 0.5s;
-}
-
-.contentBox:Hover {
-    
-    width: 100%;
-}
-
-.boxLabel {
-    
-    width 200px;
-    text-align: center;
-    
-}
-
-#gameName {
-    
-    height: 100%;
-    content: url("images/logo.png");
+    color: #AAAAAA;
 }
 
 @font-face {
