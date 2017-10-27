@@ -351,7 +351,7 @@ body {
 
 .gamesPane {
     
-    width:90%;
+    width:80%;
 }
 
 .gamePanel {
@@ -360,7 +360,7 @@ body {
     margin-top: 25px;
     margin-bottom: 25px;
     height: 200px;
-    width: 100%;
+    width: %;
     background: #f8c58f;
     display: flex;
     flex-direction: row;
@@ -388,6 +388,7 @@ body {
 .gameDesc {
     
     padding-top: 10px;
+    padding-right: 10px;
     height: 100%;
     width: 65%;
     font-size: 20px;
