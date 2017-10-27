@@ -17,6 +17,11 @@ body {
     justify-content: flex-start;
 }
 
+#logoContainer {
+    
+    height: 100%;
+}
+
 #logo {
     
     padding-left: 10px;
@@ -28,7 +33,16 @@ body {
 
 #footer {
     
-    
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+    background-color: #333333;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    color: white;
 }
 
 #nav {
@@ -67,7 +81,7 @@ body {
 
 .navItem {
     
-    font-size: 20px;
+    font-size: 25px;
     padding-left: 10px;
     padding-right: 10px;
     height: 100%;
@@ -88,9 +102,11 @@ body {
 #homePage {
     
     padding: 25px;
+    min-height: 75%;
     
     text-align: center;
     background: #7fbf7f;
+    justify-content: center;
 }
 
 #homePage h {
@@ -172,7 +188,7 @@ body {
 
 #aboutMeText {
     
-    width:50%;
+    width:69%;
 }
 
 #artPage {
@@ -188,6 +204,14 @@ body {
 #title {
     
     padding: 10px;
+    color:black;
+}
+
+#title p {
+    
+    margin:0;
+    padding: 0;
+    font-size: 20px;
 }
 
 #artPage h {
@@ -200,8 +224,16 @@ body {
     
     padding: 25px;
     
+    display: flex;
     text-align: center;
     background: #d6a36e;
+    align-items: center;
+}
+
+#gamesPage h {
+    
+    font-weight: bold;
+    font-size: 40px;
 }
 
 #contactPage {
@@ -224,21 +256,107 @@ body {
     margin: 10px;
     height:200px;
     width: 200px;
-    background: white;
-    border-radius : 5%;
+    background: #c2f88f;
+    #border-radius : 5%;
     border: 5px black solid;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.panel p {
+    
+    height: 10%;
+    color: #000000;
+    margin: 0;
+    padding-bottom: 5px;
+    font-size: 22.5px;
+}
+
 .art {
     
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.gamesPane {
+    
+    display: flex;
+    flex-direction: column;
+    width:90%;
+}
+
+.gamePanel {
+    
+    border: 5px solid black;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 200px;
+    width: 100%;
+    background: #f8c58f;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.gamePreview {
+    
+    background: white;
+    border-radius: 5%;
+    border: 3px solid #223344;
+    margin: 15px;
+    height: 170px;
+    width: 170px;
+}
+
+.gameTitle {
+    
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.gameDesc {
+    
+    padding-top: 10px;
+    height: 100%;
+    width: 65%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: justify;
+}
+
+.gameDesc p {
+    
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.gameButton {
+    
+    margin-top: 10px;
+    background: #44ff88;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:42px;
+    width: 100px;
+    border-radius: 7.5%;
+    text-decoration: none;
+    color:black;
+}
+
+.gameButton:Hover {
+    
+    background: #22dd66;
+}
+
 
 .columnContainer {
     
@@ -269,4 +387,29 @@ body {
 #spider-man:Hover {
     
     background-image: url("images/art/Spider-Man%20Homecoming%20Running.gif");
+}
+
+#cute-ball {
+    
+    background-image: url("images/art/CUTE%20BALL%20Idle.gif");
+}
+
+#cute-ball:Hover {
+    
+    background-image: url("images/art/CUTE%20BALL%20Rolling.gif");
+}
+
+#sushi {
+    
+    background-image: url("images/art/Sushi%20Idle.gif");
+}
+
+#sushi:Hover {
+    
+    background-image: url("images/art/Sushi%20Cutie.gif");
+}
+
+#SushiGamePreview {
+    
+    background: url("games/Sushi%20Preview.png") no-repeat center;
 }
