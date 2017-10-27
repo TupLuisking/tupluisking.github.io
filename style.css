@@ -360,7 +360,6 @@ body {
     margin-top: 25px;
     margin-bottom: 25px;
     height: 200px;
-    width: %;
     background: #f8c58f;
     display: flex;
     flex-direction: row;
@@ -390,9 +389,8 @@ body {
     padding-top: 10px;
     padding-right: 15px;
     height: 100%;
-    width: 65%;
+    width: 100%;
     font-size: 20px;
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     text-align: justify;
