@@ -96,7 +96,6 @@ body {
     flex-direction: column;
     color: black;
     padding-bottom: 50px;
-    overflow-x:hidden;
 }
 
 .navItem {
