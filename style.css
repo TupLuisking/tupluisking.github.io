@@ -220,10 +220,18 @@ body {
     align-items: center;
 }
 
-#title {
+#title:after {
     
     padding: 10px;
     color: black;
+    content: 'Hi! I\'m Tup Luisking :DWelcome to my portfolio :)';
+}
+
+#title:Hover:after {
+    
+    padding: 10px;
+    color: black;
+    content: 'Hi! I'm 2p (hence, the logo) Luisking :D<br>Welcome to my portfolio :)';
 }
 
 #title p {
@@ -502,7 +510,7 @@ body {
         
         .navItem {
             
-            font-size: 0.6em;
+            font-size: 0.5em;
         }
         
         .panelPane {
