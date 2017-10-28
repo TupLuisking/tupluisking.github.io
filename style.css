@@ -93,6 +93,12 @@ body {
     align-items: center;
 }
 
+::-webkit-scrollbar {
+    
+    width: 0px;
+    background: transparent;
+}
+
 .content {
     
     margin-top: 69px;
