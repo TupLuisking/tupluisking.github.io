@@ -525,19 +525,19 @@ body {
     and (height: 420px) {
         
         h:after {
-            content: '420';
+            content: '420blazeit';
         }
         
         h1:after {
-            content: '420';
+            content: '420blazeit';
         }
         
         p:after {
-            content: '420';
+            content: '420blazeit';
         }
         
         p1:after {
-            content: '420';
+            content: '420blazeit';
         }
         
         /*
