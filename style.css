@@ -521,6 +521,36 @@ body {
 }
 
 @media screen 
+    and (width: 420px)
+    and (height: 420px) {
+        
+        h:after {
+            content: '420';
+        }
+        
+        h1:after {
+            content: '420';
+        }
+        
+        p:after {
+            content: '420';
+        }
+        
+        p1:after {
+            content: '420';
+        }
+        
+        /*
+        a:after {
+            
+            text-decoration: none;
+            color: inherit;
+            content: '420';
+        }
+        */
+}
+
+@media screen 
     and (max-width: 600px) {
         
         .panelPane {
