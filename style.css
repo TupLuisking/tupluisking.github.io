@@ -25,9 +25,8 @@ body {
 
 #logo {
     
-    padding-left: 10px;
-    padding-right: 10px;
     height: 100%;
+    width: auto;
 }
 
 #footer {
@@ -79,10 +78,13 @@ body {
     background-color: #333333;
     position: fixed;
     top: 0;
+    margin: 0 auto;
+    padding: 0px;
 }
 
 #navbar {
 
+    padding-left: 0px;
     margin-top: 0px;
     display: flex;
     height: 100%;
@@ -101,9 +103,10 @@ body {
 .navItem {
     
     font-size: 1em;
+    height: 100%;
     padding-left: 10px;
     padding-right: 10px;
-    height: 100%;
+    width: 80px;
     display: flex;
     text-align: center;
     color: white;
@@ -121,7 +124,7 @@ body {
 #homePage {
     
     padding: 25px;
-    #min-height: 75%;
+    height: 69vh;
     
     text-align: center;
     background: #7fbf7f;
@@ -234,12 +237,12 @@ body {
 
 .intro:after {
     
-    content: 'Hi! I\'m Tup Luisking :D';
+    content: 'Hi there! I\'m Tup Luisking :D';
 }
 
 .intro:Hover:after {
     
-    content: 'Hi! I\'m 2p Luisking :D';
+    content: 'Hi there! I\'m 2p Luisking :D';
 }
 
 #title p {
@@ -540,10 +543,31 @@ body {
 }
 
 @media screen
-    and (max-width:500px) {
+    and (max-width:475px) {
         
         .navItem {
             
+            width: 40px;
             font-size: 0.5em;
+        }
+}
+
+@media screen
+    and (min-height:1000px) {
+        
+        #homePage {
+            
+            height: 80vh;    
+        }
+        
+        #homePage h {
+    
+            font-weight: bolder;
+            font-size: 4.20em;
+        }
+        
+        #homePicture {
+            
+            height:420px;
         }
 }
