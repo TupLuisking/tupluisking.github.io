@@ -513,13 +513,7 @@ body {
 }
 
 @media screen 
-    and (max-width: 600px)
-    and (max-height: 800px) {
-        
-        .navItem {
-            
-            font-size: 0.5em;
-        }
+    and (max-width: 600px) {
         
         .panelPane {
             
@@ -542,5 +536,14 @@ body {
         .contactThumbnail {
             
             height: 50px;
+        }
+}
+
+@media screen
+    and (max-width:500px) {
+        
+        .navItem {
+            
+            font-size: 0.5em;
         }
 }
