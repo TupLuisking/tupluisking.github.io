@@ -224,13 +224,21 @@ body {
     
     padding: 10px;
     color: black;
-    content: 'Hi! I\'m Tup Luisking :D';
 }
 
 #title:Hover:after {
     
     padding: 10px;
     color: black;
+}
+
+.intro:after {
+    
+    content: 'Hi! I\'m Tup Luisking :D';
+}
+
+.intro:Hover:after {
+    
     content: 'Hi! I\'m 2p Luisking :D';
 }
 
@@ -481,22 +489,22 @@ body {
 
 #steve-rogers {
     
-    
+    background-image: url("images/art/Capt%20Idle.gif");
 }
 
 #steve-rogers:Hover {
     
-    
+    background-image: url("images/art/Capt%20Running.gif");
 }
 
 #pug {
     
-    
+    background-image: url("images/art/Pugly%20Running.gif");
 }
 
 #pug:Hover {
     
-    
+    background-image: url("images/art/Pugly%20Sleeping.gif");
 }
 
 #SushiGamePreview {
