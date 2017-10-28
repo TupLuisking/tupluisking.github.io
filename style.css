@@ -262,7 +262,10 @@ body {
 
 #gamesPage {
     
-    padding: 25px;
+    padding: 20px;
+    
+    padding-left: 50px;
+    padding-right: 50px;
     
     text-align: center;
     background: #d6a36e;
@@ -526,18 +529,6 @@ body {
             flex-wrap: nowrap;
         }
         
-        .gamePanel {
-            
-            display: table;
-            justify-content: center;
-            padding: 15px;
-        }
-        
-        .gameButton {
-            
-            align-self: center;
-        }
-        
         .contactThumbnail {
             
             height: 50px;
@@ -553,6 +544,22 @@ body {
             padding-left: 5px;
             padding-right: 5px;
             font-size: 0.5em;
+        }
+}
+
+@media screen
+    and (max-width:624px) {
+        
+        .gamePanel {
+            
+            display: table;
+            justify-content: center;
+            padding: 15px;
+        }
+        
+        .gameButton {
+            
+            align-self: center;
         }
 }
 
