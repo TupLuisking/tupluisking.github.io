@@ -20,9 +20,9 @@ body {
 
 #logoContainer {
     
-    border-radius: 50%;
-    padding: 10;
     height: 80%;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 #logo {
@@ -567,6 +567,13 @@ body {
 
 @media screen
     and (max-width:475px) {
+        
+        #logoContainer {
+    
+            padding: 0px;
+            margin-right: 0px;
+            margin-left: 0px;
+        }
         
         .navItem {
             
