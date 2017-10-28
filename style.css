@@ -379,8 +379,9 @@ body {
 
 .gameTitle {
     
+    text-align: left;
     color: black;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: bold;
 }
 
@@ -390,7 +391,7 @@ body {
     padding-right: 15px;
     height: 100%;
     width: 100%;
-    font-size: 20px;
+    font-size: 18px;
     flex-direction: column;
     justify-content: flex-start;
     text-align: justify;
@@ -472,6 +473,26 @@ body {
 #sushi:Hover {
     
     background-image: url("images/art/Sushi%20Cutie.gif");
+}
+
+#steve-rogers {
+    
+    
+}
+
+#steve-rogers:Hover {
+    
+    
+}
+
+#pug {
+    
+    
+}
+
+#pug:Hover {
+    
+    
 }
 
 #SushiGamePreview {
