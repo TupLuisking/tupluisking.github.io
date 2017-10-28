@@ -550,11 +550,21 @@ body {
 @media screen
     and (max-width:624px) {
         
+        .gameTitle {
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        
         .gamePanel {
             
             display: table;
             justify-content: center;
             padding: 15px;
+        }
+        
+        .gamePreview {
+            
+            margin-bottom: 0px;
         }
         
         .gameButton {
