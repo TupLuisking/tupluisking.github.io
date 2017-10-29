@@ -639,7 +639,7 @@ body {
             margin-bottom: 0px;
         }
         
-        .gameButton {
+        .gameButton, .wipButton {
             
             align-self: center;
         }
