@@ -435,17 +435,18 @@ body {
 
 .gameButton {
     
+    padding:5px;
     font-size: 1.25em;
     margin-top: 10px;
     background: #44ff88;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 42px;
-    width: 100px;
+    width: 90px;
     border-radius: 7.5%;
     text-decoration: none;
     color:black;
+    text-align: center;
 }
 
 .gameButton:Hover {
@@ -456,6 +457,8 @@ body {
 
 .wipButton {
     
+    padding:5px;
+    text-align: center;
     font-size: 1.25em;
     margin-top: 10px;
     background: #00bb44;
