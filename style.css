@@ -450,10 +450,24 @@ body {
 
 .gameButton:Hover {
     
-    background: #22dd66;
-    color:white;
+    background: #33ee77;
+    color: white;
 }
 
+.wipButton {
+    
+    font-size: 1.25em;
+    margin-top: 10px;
+    background: #00bb44;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    width: 100px;
+    border-radius: 7.5%;
+    text-decoration: none;
+    color: #556677;
+}
 
 .columnContainer {
     
