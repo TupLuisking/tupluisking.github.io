@@ -428,6 +428,11 @@ body {
     padding-bottom: 2.5px;
 }
 
+.contribution {
+    
+    color: #704008;
+}
+
 .gameButton {
     
     font-size: 1.25em;
@@ -460,6 +465,16 @@ body {
     
     display: flex;
     flex-direction: row;
+}
+
+#nickName:Hover:after {
+    
+    content: ' (2p, hence the logo)';
+}
+
+#ainaGame:Hover:after {
+    
+    content: ' (Made for a past GF for her b-day. Expect cheesy shit & references you won\'t get.)'; 
 }
 
 @font-face {
