@@ -316,6 +316,11 @@ body {
     padding-bottom: 10px;
 }
 
+.contactPanel a {
+    
+    #width: 360px;
+}
+
 .contactThumbnail {
     
     border-radius: 25%;
