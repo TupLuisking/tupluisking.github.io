@@ -496,7 +496,8 @@ body {
 
 #ainaGame:Hover:after {
     
-    content: ' (Made for a past GF for her b-day. Expect cheesy shit & references you won\'t get.)'; 
+    content: '\a(Made for a past GF for her b-day. Expect cheesy shit & references you won\'t get.)'; 
+    white-space: pre-wrap;
 }
 
 @font-face {
