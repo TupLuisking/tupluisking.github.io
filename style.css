@@ -559,6 +559,16 @@ body {
     background-image: url("images/art/Pugly%20Sleeping.gif");
 }
 
+#pizzaguy {
+    
+    background-image: url("images/art/Pizza%20Man%20Idle.gif");
+}
+
+#pizzaguy:Hover {
+    
+    background-image: url("images/art/Pizza%20Man%20Running.gif");
+}
+
 #SushiGamePreview {
     
     background: url("games/Sushi%20Preview.png") no-repeat center;
