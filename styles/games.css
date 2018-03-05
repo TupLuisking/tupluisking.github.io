@@ -1,0 +1,61 @@
+#games {
+    
+    grid-area: games;
+}
+
+.gamePanel {
+    
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+.gamePanel:hover {
+    
+    background: #EEEEEE;
+}
+
+.gameInfo {
+    
+    margin-top: 1vw;
+}
+
+.gameName {
+    
+    width: 100%;
+    grid-area: gamename;
+    font-size: 1.75em;
+}
+
+.gameDesc {
+    
+    padding-top: 1vh;
+    font-size: 1.5em;
+    width: 100%;
+    grid-area: gamedesc;
+}
+
+.gameimg {
+    
+    width: 125px;
+    height: 125px;
+    margin-right: 2vw;
+    
+    align-self: center;
+    border-radius: 10%;
+    border: 0.5vw solid black;
+}
+
+#happyBirthGame {
+    
+    background-image: url("../games/Happy%20Birthgame%20To%20You%20Preview.png");
+}
+
+#ballGame {
+    
+    background-image: url("../games/Literally%20Ball%20Preview2.png");
+}

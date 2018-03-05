@@ -1,0 +1,11 @@
+#contact {
+    
+    grid-area: contact;
+    
+    border: none;
+}
+
+#contact #desc {
+    
+    font-size: 1.5em;
+}

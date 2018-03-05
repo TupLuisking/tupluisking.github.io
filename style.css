@@ -1,685 +1,168 @@
+
 html {
     
-    display: flex;
-    height:100%;
-    width: 100%;
-    font-family: pixelFont;
+    font-family: "Open Sans";
+    font-size: 12px;
+    background: #FFFFFF;
 }
 
 body {
     
-    font-size: 25px;
-    background: #333333;
-    width: 100%;
-    height: 100%;
+    font-size: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 8fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        ".  nav games   ." 
+        ".  nav art     ."
+        ".  nav three-d ."
+        ".  nav aboutme ."
+        ".  nav contact ."
+        ".  nav footer  .";
     margin: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-#logoContainer {
-    
-    height: 80%;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-#logo {
-    padding: 0px;
-    border-radius: 50%;
-    height: 100%;
-}
-
-#footer {
-    
-    justify-content: center;
-    background-color: #333333;
-    font-size: 0.8em;
-    color: white;
-    margin: 0;
-    padding: 5px;
-    padding-bottom: 20px;
-}
-
-#footer p {
-    
-    margin: 0;
-    text-align: left;
-}
-
-#randomSites {
-    
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#footer a {
-    
-    font-size: 0.6em;
-    
-    text-decoration: none;
-    color: white;
-    padding-right: 10px;
-    padding-left: 10px;
-    
-    margin-right: 2.5px;
-    margin-left:2.5px;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
 }
 
 #nav {
     
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 69px;
-    width: 100%;
-    background-color: #333333;
-    position: fixed;
-    top: 0;
-    margin: 0 auto;
-    padding: 0px;
-}
-
-#navbar {
-
-    padding-left: 0px;
-    margin-top: 0px;
-    display: flex;
-    height: 100%;
-    align-items: center;
-}
-
-::-webkit-scrollbar {
+    grid-area: nav;
     
-    width: 0px;
-    background: transparent;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "portrait"
+        "list";
+    width: 20%;
+    position: fixed;
+    margin-top: 3vh;
+    #border-right: 1px black solid;
+}
+
+#nav ul {
+    
+    grid-area: list;
+    
+    text-align: right;
+    margin-right: 2vw;
+    display: flex;
+    flex-direction: column;
+    list-style:  none;
+}
+
+#nav ul Li {
+    
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+#nav ul li a {
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: black;
+    text-decoration: none;
+}
+
+#nav #portraitContainer {
+    
+    grid: portrait;
+    margin-right: 2vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#nav ul img {
+    
+    display: none;
+}
+
+#nav #portraitContainer #portrait {
+    
+    width: 100px;
+    height: auto;
+}
+
+.resImage {
+    
+    align-self: center;
+    object-fit: contain;
 }
 
 .content {
     
-    margin-top: 69px;
-    display: flex;
-    flex-direction: column;
-    color: black;
-    padding-bottom: 50px;
-}
-
-.navItem {
-    
-    font-size: 1em;
-    height: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 80px;
-    display: flex;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    font-family: pixelFont;
-    justify-content: center;
-    align-items: center;
-}
-
-.navItem:Hover {
-    
-    color: #AAAAAA;
-}
-
-#homePage {
-    
-    padding: 25px;
-    height: 69vh;
-    
-    text-align: center;
-    background: #7fbf7f;
-    justify-content: center;
-}
-
-#homePage h {
-    
-    font-weight: bolder;
-    font-size: 1.75em;
-}
-
-#homePicture {
-    
-    height:300px;
-    background: url("images/Tup.png") no-repeat center;
-    background-size: contain;
-    display: block;
-}
-
-#aboutPage {
-    
-    padding: 25px;
-    text-align: center;
-    background: #7fbfbf;
-    align-items: center;
-}
-
-#aboutPage h {
-    
-    text-align: center;
-    font-size: 1.75em;
-    padding: 10px;
-    font-weight: bold;
-    margin-bottom: 20px 
-}
-
-#aboutPage h1 {
-    
-    padding-bottom: 10px;
-    margin-top: 50px;
-    margin-bottom: 0px;
-    font-weight: normal;
-    font-size: 1.5em;
-}
-
-#aboutPage p {
-    
-    color: #112233;
-    margin: 0;
-    font-size: 1.25em;
-}
-
-#aboutPage p1 {
-    
-    color: #334455;
-    font-size: 1em;
-}
-
-#portraitContainer {
-    
-    width: 169px;
-    height: 169px;
-    border-radius: 50%;
-    border: 10px solid black;
-    background: white;
-}
-
-#portrait {
-    
-    width: 100%;
-    height: 100%;
-    background: url("images/portrait-normal.png") no-repeat center;
-    background-size: contain;
-    border-radius: 50%;
-}
-
-#portrait:Hover {
-    
-    background: url("images/portrait-pixel.png") no-repeat center;
-    background-size: contain;
-}
-
-#aboutMeText {
-    
-    width:69%;
-}
-
-#artPage {
-    
-    padding: 25px;
-    
-    display: flex;
-    text-align: center;
-    background: #a1d66e;
-    align-items: center;
-}
-
-#title:after {
-    
-    padding: 10px;
-    color: black;
-}
-
-#title:Hover:after {
-    
-    padding: 10px;
-    color: black;
-}
-
-.intro:after {
-    
-    content: 'Hi there! I\'m Tup Luisking :D';
-}
-
-.intro:Hover:after {
-    
-    content: 'Hi there! I\'m 2p Luisking :D';
-}
-
-#title p {
-    
-    margin:0;
-    padding: 0;
-    font-size: 0.8em;
-}
-
-#artPage h {
-    
-    font-weight: bold;
-    font-size: 1.75em;
-}
-
-#gamesPage {
-    
-    padding: 20px;
-    
-    padding-left: 50px;
-    padding-right: 50px;
-    
-    text-align: center;
-    background: #d6a36e;
-    align-items: center;
-}
-
-#gamesPage h {
-    
-    font-weight: bold;
-    font-size: 1.75em;
-}
-
-#contactPage {
-    
-    padding: 25px;
-    
-    text-align: center;
-    background: #a18c76;
-    align-items: center;
-}
-
-#contactPage h {
-    
-    padding-top:10px;
-    padding-bottom: 10px;
-    font-weight: bold;
-    font-size: 1.75em;
-}
-
-.contactPane {
-    
-    height: inherit;
-}
-
-.contactPanel {
-    
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.contactPanel a {
-    
-    #width: 360px;
-}
-
-.contactThumbnail {
-    
-    border-radius: 25%;
-    margin-right: 20px;
-    height:75px;
-    width:auto;
-}
-
-.contactPanel a {
-    
-    text-decoration: none;
-    color: black;
-    margin: 0;
-    padding: 0;
-    font-size: 1em;
-    word-break: break-all;
-}
-
-.panelPane {
-    
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.panel {
-    
-    margin: 10px;
-    height:200px;
-    width: 200px;
-    background: #c2f88f;
-    #border-radius : 5%;
-    border: 5px black solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.panel p {
-    
-    height: 10%;
-    color: #000000;
-    margin: 0;
-    padding-bottom: 5px;
-    font-size: 0.95em;
-}
-
-.art {
-    
-    width: 95%;
-    height: 95%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.gamePanel {
-    
-    border: 5px solid black;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    height: 200px;
-    background: #f8c58f;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.gamePreview {
-    
-    background: white;
-    border-radius: 5%;
-    border: 3px solid #223344;
-    margin: 15px;
-    height: 170px;
-    width: 170px;
-}
-
-.gameTitle {
-    
-    text-align: left;
-    color: black;
-    font-size: 1.25em;
-    font-weight: bold;
-}
-
-.gameDesc {
-    
-    display: flex;
-    padding-top: 10px;
-    padding-right: 15px;
-    height: 100%;
-    width: 100%;
-    font-size: 0.69em;
-    flex-direction: column;
-    justify-content: flex-start;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     text-align: justify;
+    display: grid;
+    grid-gap: 5px;
+    border-bottom: 4px double black;
 }
 
-.gameDesc p {
+.content .shortDesc {
     
-    margin: 0px;
-    padding-top: 10px;
-}
-
-.gameDesc p1 {
-    
-    font-size: 1em;
-    padding-bottom: 2.5px;
-}
-
-.contribution {
-    
-    color: #112233;
-}
-
-.gameButton {
-    
-    padding:5px;
+    width: 100%;
+    text-align: left;
     font-size: 1.25em;
-    margin-top: 10px;
-    background: #44ff88;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.content p {
+    
+    margin: auto;
+}
+
+.content h {
+    
+    margin-top: 0px;
+    font-size: 2.5em;
+}
+
+.contentrow {
+    
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90px;
-    border-radius: 7.5%;
-    text-decoration: none;
-    color:black;
-    text-align: center;
+    flex-flow: row wrap;
+    justify-content: flex-start;
 }
 
-.gameButton:Hover {
+.contentcolumn {
     
-    background: #33ee77;
-    color: white;
-}
-
-.wipButton {
-    
-    padding:5px;
-    text-align: center;
-    font-size: 1.25em;
-    margin-top: 10px;
-    background: #00bb44;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 42px;
-    width: 100px;
-    border-radius: 7.5%;
-    text-decoration: none;
-    color: #556677;
-}
-
-.columnContainer {
-    
     flex-direction: column;
-    align-items: center;
 }
 
-.rowContainer {
+.link {
     
-    display: flex;
-    flex-direction: row;
+    color: #223344;
+    text-decoration: underline;
 }
 
-#nickName:Hover:after {
+#footer {
     
-    content: ' (2p, hence the logo)';
-}
-
-#ainaGame:Hover:after {
-    
-    content: '\a(Made for a past GF for her b-day. Expect cheesy shit & references you won\'t get.)'; 
-    white-space: pre-wrap;
+    margin-top: 2.5vh;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-bottom: 2vw;
+    grid-area: footer;
 }
 
 @font-face {
     
-    font-family: pixelFont;
-    #src: url("fonts/OldSchoolAdventures.ttf");
-    #src: url("fonts/pixelsix.ttf");
-    #src: url("fonts/hellovetica.ttf");
-    src: url("fonts/disposabledroid.ttf");
+    font-family: "Pixel Font";
+    src: url("fonts/disposabledroid.ttf")
 }
 
-#spider-man {
+@font-face {
     
-    background-image: url("images/art/Spider-Man%20Homecoming%20Idle.gif");
+    font-family: "Open Sans";
+    src: url("fonts/opensans.ttf")
 }
 
-#spider-man:Hover {
+@font-face {
     
-    background-image: url("images/art/Spider-Man%20Homecoming%20Running.gif");
-}
-
-#cute-ball {
-    
-    background-image: url("images/art/CUTE%20BALL%20Idle.gif");
-}
-
-#cute-ball:Hover {
-    
-    background-image: url("images/art/CUTE%20BALL%20Rolling.gif");
-}
-
-#sushi {
-    
-    background-image: url("images/art/Sushi%20Idle.gif");
-}
-
-#sushi:Hover {
-    
-    background-image: url("images/art/Sushi%20Cutie.gif");
-}
-
-#steve-rogers {
-    
-    background-image: url("images/art/Capt%20Idle.gif");
-}
-
-#steve-rogers:Hover {
-    
-    background-image: url("images/art/Capt%20Running.gif");
-}
-
-#pug {
-    
-    background-image: url("images/art/Pugly%20Running.gif");
-}
-
-#pug:Hover {
-    
-    background-image: url("images/art/Pugly%20Sleeping.gif");
-}
-
-#pizzaguy {
-    
-    background-image: url("images/art/Pizza%20Man%20Idle.gif");
-}
-
-#pizzaguy:Hover {
-    
-    background-image: url("images/art/Pizza%20Man%20Running.gif");
-}
-
-#SushiGamePreview {
-    
-    background: url("games/Sushi%20Preview.png") no-repeat center;
-}
-
-@media screen 
-    and (width: 420px)
-    and (height: 420px) {
-        
-        h:after {
-            content: '420blazeit';
-        }
-        
-        h1:after {
-            content: '420blazeit';
-        }
-        
-        p:after {
-            content: '420blazeit';
-        }
-        
-        p1:after {
-            content: '420blazeit';
-        }
-        
-        /*
-        a:after {
-            
-            text-decoration: none;
-            color: inherit;
-            content: '420';
-        }
-        */
-}
-
-@media screen 
-    and (max-width: 600px) {
-        
-        .panelPane {
-            
-            flex-direction: column;
-            flex-wrap: nowrap;
-        }
-        
-        .contactThumbnail {
-            
-            height: 50px;
-        }
-}
-
-@media screen
-    and (max-width:475px) {
-        
-        #logoContainer {
-    
-            padding: 0px;
-            margin-right: 0px;
-            margin-left: 0px;
-        }
-        
-        .navItem {
-            
-            width: 40px;
-            padding-left: 5px;
-            padding-right: 5px;
-            font-size: 0.5em;
-        }
-}
-
-@media screen
-    and (max-width:624px) {
-        
-        .gameTitle {
-            padding-bottom: 10px;
-            text-align: center;
-        }
-        
-        .gamePanel {
-            
-            display: table;
-            justify-content: center;
-            padding: 15px;
-        }
-        
-        .gamePreview {
-            
-            margin-bottom: 0px;
-        }
-        
-        .gameButton, .wipButton {
-            
-            align-self: center;
-        }
-}
-
-@media screen
-    and (min-height:1000px) {
-        
-        #homePage {
-            
-            height: 80vh;    
-        }
-        
-        #homePage h {
-    
-            font-weight: bolder;
-            font-size: 4.20em;
-        }
-        
-        #homePicture {
-            
-            height:420px;
-        }
+    font-family: "Roboto Slab";
+    src: url("fonts/robotoslab.ttf")
 }
