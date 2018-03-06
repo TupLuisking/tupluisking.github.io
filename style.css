@@ -228,6 +228,7 @@ body {
     font-size: 1.25em;
     width: 100%;
     grid-area: gamedesc;
+    text-align: justify;
 }
 
 .gameimg {
@@ -268,6 +269,7 @@ body {
 .artSquare {
     
     background: #FEFEFF;
+    position: relative;
 }
 
 .artSquare:hover {

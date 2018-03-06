@@ -1,5 +1,7 @@
 console.log("Script imported");
 
+$(".navbar").localScroll();
+
 function changeImage(element, newSrc) {
     
     element.setAttribute('src', "images/art/" + newSrc);
