@@ -15,3 +15,24 @@ function changePortrait(element, newSrc) {
     
     element.setAttribute('src', "images/" + newSrc);
 }
+
+function onGamePanelHover(element) {
+    
+    console.log("Changing border");
+    var gameimg = element.getElementsByClassName("gameimg")[0];
+    
+    console.log(gameimg);
+    gameimg.border = null;
+    gameimg.borderColor = "black";
+    
+}
+
+function onGamePanelOut(element) {
+    
+    console.log("Changing border");
+    var gameimg = element.getElementsByClassName("gameimg")[0];
+    
+    console.log(gameimg);
+    gameimg.border = null;
+    gameimg.borderColor = "#e6eaf2";
+}
