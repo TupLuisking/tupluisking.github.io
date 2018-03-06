@@ -24,6 +24,7 @@ body {
 
 #nav {
     
+    z-index: 2;
     grid-area: nav;
     
     display: grid;
@@ -163,11 +164,6 @@ body {
     margin-bottom: 10px;
 }
 
-#aboutme #portrait {
-    
-    margin-left: 15px;
-}
-
 #aboutme #desc {
     
     grid-area: aboutdesc;
@@ -184,6 +180,13 @@ body {
     margin-bottom: 10px;
     border-radius: 50%;
     border: 5px solid black;
+    transition: 0.420s;
+    margin-left: 15px;
+}
+
+#aboutme #portrait:hover {
+    
+    transform: rotate(360deg);
 }
 
 #games {
@@ -200,6 +203,7 @@ body {
     display: flex;
     flex-direction: row;
     text-align: left;
+    transition: 0.25s;
 }
 
 .gamePanel:hover {
@@ -225,6 +229,7 @@ body {
 .gameDesc {
     
     padding-top: 1vh;
+    margin-right: 10px;
     font-size: 1.25em;
     width: 100%;
     grid-area: gamedesc;
@@ -268,9 +273,9 @@ body {
 
 .artSquare {
     
-    z-index: -1;
     background: #FEFEFF;
     position: relative;
+    transition: 0.25s;
 }
 
 .artSquare:hover {
@@ -481,7 +486,7 @@ body {
     
     .gamePanel {
         
-        padding-right: 10px;
+        padding-right: 15px;
     }
     
     .gameimg {
