@@ -51,8 +51,8 @@ body {
 
 #nav ul Li {
     
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #nav ul li a {
@@ -165,7 +165,7 @@ body {
 
 #aboutme #portrait {
     
-    margin-left: 2vw;
+    margin-left: 15px;
 }
 
 #aboutme #desc {
@@ -234,12 +234,11 @@ body {
     
     width: 125px;
     height: 125px;
-    margin-right: 2vw;
+    margin-right: 10px;
     
     align-self: center;
-    border-width: 7.5px;
-    border-style: solid;
-    border-color: #e6eaf2;
+    border: 2px solid #e6eaf2;
+    border-radius: 10%;
 }
 
 #art {
@@ -263,7 +262,7 @@ body {
         "ball spider spider"
         "pizza pizza sushi"
         "pizza pizza capt";
-    grid-gap: 2.5vw;
+    grid-gap: 10px;
 }
 
 .artSquare {
