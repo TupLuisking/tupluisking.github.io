@@ -10,7 +10,7 @@ body {
     
     font-size: 1em;
     display: grid;
-    grid-template-columns: 1fr 1fr 8fr 1fr;
+    grid-template-columns: 1fr 1fr 9fr 0.8fr;
     grid-template-rows: auto;
     grid-template-areas:
         ".  nav games   ." 
@@ -237,7 +237,7 @@ body {
     margin-right: 2vw;
     
     align-self: center;
-    border-width: 0.69vw;
+    border-width: 7.5px;
     border-style: solid;
     border-color: #e6eaf2;
 }
