@@ -207,6 +207,37 @@ body {
     transform: rotate(360deg);
 }
 
+#aboutme .dropDown {
+    
+    padding: 5px;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: 0.5s;
+}
+
+#aboutme .dropDown p {
+    
+    font-weight: normal;
+    
+    overflow-y: hidden;
+    max-height: 0px;
+    
+    transition-property: all;
+    transition-duration: 1s;
+    
+    word-break: break-all;
+}
+
+#aboutme .dropDown:hover {
+    
+    background: #d5d9e1;
+}
+
+#aboutme .dropDown:hover p {
+    
+    max-height: 100px;
+}
+
 #games {
     
     grid-area: games;
