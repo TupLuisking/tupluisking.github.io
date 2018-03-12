@@ -1,8 +1,9 @@
 
 html {
     
-    font-family: "Open Sans";
-    font-size: 12px;
+/*    font-family: "Open Sans";*/
+    font-family: "Pixel Font";
+    font-size: 16px;
     background: #e6eaf2;
 }
 
@@ -10,13 +11,13 @@ body {
     
     font-size: 1em;
     display: grid;
-    grid-template-columns: 1fr 1fr 9fr 0.8fr;
+    grid-template-columns: 1fr 1fr 8fr 0.8fr;
     grid-template-rows: auto;
     grid-template-areas:
+        ".  nav aboutme ."
         ".  nav games   ." 
         ".  nav art     ."
         ".  nav three-d ."
-        ".  nav aboutme ."
         ".  nav contact ."
         ".  nav footer  .";
     margin: 0px;
@@ -90,6 +91,13 @@ body {
     object-fit: contain;
 }
 
+#header {
+    
+    grid-area: header;
+    
+    display: none;
+}
+
 .content {
     
     margin-left: 4vw;
@@ -120,6 +128,7 @@ body {
     
     margin-top: 0px;
     font-size: 2.5em;
+    font-weight: bold;
 }
 
 .contentrow {
@@ -145,17 +154,17 @@ body {
     
     grid-area: aboutme;
     
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 25% 75%;
     grid-template-rows: auto;
     grid-template-areas:
         ". ."
-        "aboutdesc aboutimg"
-        "aboutdesc aboutimg";
+        "aboutimg aboutdesc"
+        "aboutimg aboutdesc";
 }
 
 #aboutme h {
     
-    padding-bottom: 0.5vh;
+    padding-bottom: 0.75vh;
 }
 
 #aboutme #names p {
@@ -169,6 +178,7 @@ body {
     grid-area: aboutdesc;
     
     font-size: 1.5em;
+    margin-right: 15px;
 }
 
 #aboutme #portrait {
@@ -178,10 +188,10 @@ body {
     width: 150px;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-radius: 50%;
-    border: 2.5px solid black;
+    border-radius: 10%;
+    border: 3px solid black;
     transition: 0.420s;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 #aboutme #portrait:hover {
@@ -362,7 +372,7 @@ body {
 @font-face {
     
     font-family: "Pixel Font";
-    src: url("fonts/disposabledroid.ttf")
+    src: url("fonts/PixelOperator.ttf")
 }
 
 @font-face {
@@ -393,17 +403,16 @@ body {
 @media only screen and (max-width: 690px) {
     
     body {
-
         grid-template-columns: 100%;
         grid-template-rows: auto;
         grid-template-areas:
-            "nav"
+            "header"
+            "aboutme"
             "games"
             "art"
             "three-d"
-            "aboutme"
             "contact"
-            "footer";
+            "footer"
     }
     
     #nav {
@@ -457,6 +466,25 @@ body {
         color: white;
     }
     
+    #header {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        display: none;
+    }
+    
+    #headerlogo {
+        
+        width: 100px;
+        height: auto;
+    }
+    
+    .content {
+        
+        padding-top: 60px;
+    }
+    
     #gamebar {
         
         border-right: 1px solid white;
@@ -464,22 +492,17 @@ body {
     
     #artbar {
         
-        border-right: 1px solid white;
+        border-left: 1px solid white;
     }
     
     #aboutbar {
         
-        border-left: 1px solid white;
+        border-right: 1px solid white;
     }
     
     #contactbar {
         
         border-left: 1px solid white;
-    }
-    
-    .content {
-        
-        padding-top: 55px;
     }
 
     .content h {
@@ -490,6 +513,8 @@ body {
     #aboutme #portrait {
         
         justify-self: center;
+        width: 125px;
+        border-radius: 50%;
     }
     
     .gameName {
