@@ -45,7 +45,7 @@ body {
     grid-area: list;
     
     text-align: right;
-    margin-right: 2vw;
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
     list-style:  none;
@@ -69,10 +69,11 @@ body {
 #nav #portraitContainer {
     
     grid: portrait;
-    margin-right: 2vw;
+    justify-self: right;
     display: flex;
     justify-content: flex-end;
 }
+
 
 
 #nav ul li a p {
@@ -107,7 +108,7 @@ body {
 .content {
     
     margin-left: 4vw;
-    margin-right: 4vw;
+    margin-right: 1vw;
     padding-top: 2vh;
     padding-bottom: 2vh;
     text-align: justify;
@@ -160,12 +161,18 @@ body {
     
     grid-area: aboutme;
     
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 20% 80%;
     grid-template-rows: auto;
     grid-template-areas:
         ". ."
+        "short short"
         "aboutimg aboutdesc"
         "aboutimg aboutdesc";
+}
+
+#aboutme .shortDesc {
+    
+    grid-area: short;
 }
 
 #aboutme h {
@@ -173,18 +180,12 @@ body {
     padding-bottom: 0.75vh;
 }
 
-#aboutme #names p {
-    
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 #aboutme #desc {
     
     grid-area: aboutdesc;
     
     font-size: 1.5em;
-    margin-right: 15px;
+    margin-right: 40px;
 }
 
 #aboutme #portrait {
@@ -255,8 +256,8 @@ body {
 
 .gameimg {
     
-    width: 125px;
-    height: 125px;
+    width: 150px;
+    height: 150px;
     margin-right: 10px;
     
     align-self: center;
@@ -281,15 +282,15 @@ body {
     
     text-align: center;
     
+    align-self: center;
+    
     display: grid;
     
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-        "pugly spider spider"
-        "ball spider spider"
-        "pizza pizza sushi"
-        "pizza pizza capt";
+        "pugly spider spider pizza pizza sushi"
+        "ball spider spider pizza pizza capt";
     grid-gap: 10px;
 }
 
@@ -402,6 +403,7 @@ body {
         grid-template-rows: auto;
         grid-template-areas:
             "."
+            "short"
             "aboutimg"
             "aboutdesc";
     }
@@ -409,6 +411,26 @@ body {
     #aboutme #portrait {
         
         justify-self: start;
+    }
+    
+    #aboutme #desc {
+        
+        margin-right: 0px;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    #artCompilation {
+        
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            "pugly spider spider"
+            "ball spider spider"
+            "pizza pizza sushi"
+            "pizza pizza capt";
     }
 }
 
@@ -514,6 +536,8 @@ body {
     .content {
         
         padding-top: 60px;
+        margin-left: 4vw;
+        margin-right: 4vw;
     }
     
     #gamebar {
