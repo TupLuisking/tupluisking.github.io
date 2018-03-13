@@ -157,22 +157,22 @@ body {
     text-decoration: underline;
 }
 
-#aboutme  {
+#aboutme {
     
     grid-area: aboutme;
     
-    grid-template-columns: 20% 80%;
-    grid-template-rows: auto;
-    grid-template-areas:
-        ". ."
-        "short short"
-        "aboutimg aboutdesc"
-        "aboutimg aboutdesc";
+    display: flex;
+    flex-direction: column;
 }
 
-#aboutme .shortDesc {
+#aboutme #portrait {
+
     
-    grid-area: short;
+}
+
+#aboutme #desc {
+
+    margin-right: 0px;
 }
 
 #aboutme h {
@@ -185,7 +185,7 @@ body {
     grid-area: aboutdesc;
     
     font-size: 1.5em;
-    margin-right: 40px;
+    margin-top: 10px;
     
     display: flex;
     align-content: center;
@@ -196,13 +196,11 @@ body {
     grid-area: aboutimg;
     
     width: 150px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 50%;
+    
+    margin: 10px;border-radius: 50%;
     border: 3px solid black;
     transition: 0.420s;
-    align-self: center;
-    justify-self: center;
+    
 }
 
 #aboutme #portrait:hover {
@@ -212,6 +210,7 @@ body {
 
 #aboutme .dropDown {
     
+    margin-bottom: 10px;
     padding: 5px;
     font-weight: bold;
     font-size: 1.5em;
@@ -220,16 +219,18 @@ body {
 
 #aboutme .dropDown p {
     
+    margin-left: 15px;
+    
     font-weight: normal;
     
     overflow-y: hidden;
     max-height: 0px;
     
     transition-property: all;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     
+    text-align: left;
     word-wrap: break-word;
-    word-break: break-all;
 }
 
 #aboutme .dropDown:hover {
@@ -430,30 +431,6 @@ body {
     src: url("fonts/robotoslab.ttf")
 }
 
-@media only screen and (max-width: 1200px) {
-    
-    #aboutme {
-        
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "."
-            "short"
-            "aboutimg"
-            "aboutdesc";
-    }
-    
-    #aboutme #portrait {
-        
-        justify-self: start;
-    }
-    
-    #aboutme #desc {
-        
-        margin-right: 0px;
-    }
-}
-
 
 @media only screen and (max-width: 800px) {
 
@@ -602,7 +579,7 @@ body {
     
     #aboutme #portrait {
         
-        justify-self: center;
+        align-self: center;
         width: 125px;
         border-radius: 50%;
     }
