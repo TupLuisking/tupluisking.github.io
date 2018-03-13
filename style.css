@@ -225,6 +225,7 @@ body {
     transition-property: all;
     transition-duration: 1s;
     
+    word-wrap: break-word;
     word-break: break-all;
 }
 
