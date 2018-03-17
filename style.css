@@ -210,21 +210,23 @@ body {
 
 #aboutme .dropDown {
     
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 5px;
     font-weight: bold;
     font-size: 1.5em;
-    transition: 0.5s;
 }
 
-#aboutme .dropDown p {
+#aboutme .dropDown ul {
     
-    margin-left: 15px;
+    list-style: square;
+    
+    margin-top: 5px;
+    margin-bottom: 0px;
     
     font-weight: normal;
     
     overflow-y: hidden;
-    max-height: 0px;
+    max-height: 0;
     
     transition-property: all;
     transition-duration: 0.5s;
@@ -238,7 +240,7 @@ body {
     background: #d5d9e1;
 }
 
-#aboutme .dropDown:hover p {
+#aboutme .dropDown:hover ul {
     
     max-height: 100px;
 }
@@ -472,6 +474,8 @@ body {
         padding: 0px;
         margin: 0px;
         
+        bottom: 0px;
+        
     }
     
     #nav #portraitContainer {
@@ -502,11 +506,8 @@ body {
     
     #nav ul img {
         
-        display: block;
         width: 40px;
         height: 40px;
-        padding-left: 5px;
-        padding-right: 5px;
     }
     
     #nav ul li a {
@@ -547,7 +548,6 @@ body {
     
     .content {
         
-        padding-top: 60px;
         margin-left: 4vw;
         margin-right: 4vw;
     }
@@ -597,6 +597,9 @@ body {
     
     .gamePanel {
         
+        display: flex;
+        flex-direction: row;
+        align-content: center;
         padding-right: 15px;
     }
     
@@ -605,5 +608,11 @@ body {
         width: 100px;
         height: 100px;
         margin: 10px;
+    }
+    
+    #footer {
+        
+        padding-bottom: 55px;
+        
     }
 }
