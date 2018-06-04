@@ -1390,11 +1390,12 @@ a {
                 }
             }
             
-            @for $i from 1 through 7 {
+            @for $i from 2 through 8 {
                 
                 .reelitem:nth-child(#{$i}) {
                     
-                    transform: translateX(($i - 1) * 300px);
+                    transform: translateX(($i - 2) * 300px) scale(0.8);
+                    border: 5px solid white;
                 }
             }
             
