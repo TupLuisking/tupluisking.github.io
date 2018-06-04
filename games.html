@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+        <meta charset="utf-8" />
+        <title>Tup's Games</title>
+        <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+        <link rel="icon" href="images/Tup.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="scripts/jquery-3.3.1.min.js"></script>
+        <script src="script.js"></script>
+        
+    </head>
+    
+    <body>
+        
+        <!-- NAVBAR GOES HERE -->
+        <div id=navbar-container></div>
+        
+        <div class=page id=gamepage>
+        
+            <div class=pageheader>
+                <p id=pageheadermain>GAMES</p>
+                <p id=pageheadersub>HAVE A LOOK AT MY BAD GAMES</p>
+            </div>
+            
+            <div id=gamereel-container>
+
+                <div id=gamereel>
+                    
+                    <div onclick="OpenGame();" id=play-button>
+                        <p class=text-outlined>CLICK TO PLAY!!!</p>
+                    </div>
+                    
+                    <div onclick="SkipReel(0);" class=reelitem>
+                        <img class=screenshot src="games/previews/ggj2018_ss.png">
+                        <img class=preview src="games/previews/ggj2018_prev.gif">
+                    </div>
+                    <div onclick="SkipReel(1);" class=reelitem>
+                        <img class=screenshot src="games/previews/peteredout_ss.png">
+                        <img class=preview src="games/previews/peteredout_prev.gif">
+                    </div>
+                    <div onclick="SkipReel(2);" class=reelitem>
+                        <img class=screenshot src="games/previews/dislaimer_ss.png">
+                        <img class=preview src="games/previews/disclaimer_prev.gif">
+                    </div>
+                    <div onclick="SkipReel(3);" class=reelitem>
+                        <img class=screenshot src="games/previews/ball_ss.png">
+                        <img class=preview src="games/previews/ball_prev.gif">
+                    </div>
+                    <div onclick="SkipReel(4);" class=reelitem>
+                        <img class=screenshot src="games/previews/capt_ss.png">
+                        <img class=preview src="games/previews/capt_prev.gif">
+                    </div>
+                    <div onclick="SkipReel(5);" class=reelitem>
+                        <img class=screenshot src="games/previews/sushi_ss.png">
+                        <img class=preview src="games/previews/sushi_prev.gif">
+                    </div>
+                    <div onclick="SkipReel(6);" class=reelitem>
+                        <img class=screenshot src="games/previews/hbg_ss.png">
+                        <img class=preview src="games/previews/hbg_prev.gif">
+                    </div>
+                    
+                    <div class="text-outlined reelmove" onclick="SpinReel(-1);" id=reelleft>&#x21DA;</div>
+                    <div class="text-outlined reelmove" onclick="SpinReel(1);" id=reelright>&#x21DB;</div>
+                    
+                </div>
+
+            </div>
+            
+            <div id=game-details>
+                <div id=game-name>Name</div>
+                <div class=italic id=game-mentions>Mentions</div>
+                <div id=game-info>Info</div>
+            </div>
+            
+        </div>
+        
+        <!-- FOOTER GOES HERE -->
+        <div id=footer-container></div>
+        
+    </body>
+    
+</html>

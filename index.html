@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   
+
     <head>
         
         <meta charset="utf-8" />
@@ -8,302 +8,150 @@
         <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
         <link rel="icon" href="images/Tup.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="scripts/jquery-3.3.1.min.js"></script>
+        <script src="script.js"></script>
+        
     </head>
     
     <body>
-       
-        <div id=nav> 
-            <div id=portraitContainer> 
-                <img 
-                     class=resImage id=portrait 
-                     src="images/Logo%20v02.png">
+        
+        <!-- NAVBAR GOES HERE -->
+        <div id=navbar-container></div>
+        
+        <div id=slideshow>
+            <div class=slide id=slide1></div>
+            <div class=slide id=slide2></div>
+            <div class=slide id=slide3></div>
+            <div class=slide id=slide4></div>
+            <div class=slide id=slide5></div>
+            <div id=slideoverlay></div>
+            <div id=slide-buttons>
+                <div class="slide-skip text-outlined" onclick="ChangeSlideSkip(-1);">&#x2039;</div>
+                <div class=slide-button onclick="ChangeSlide(0);"></div>
+                <div class=slide-button onclick="ChangeSlide(1);"></div>
+                <div class=slide-button onclick="ChangeSlide(2);"></div>
+                <div class=slide-button onclick="ChangeSlide(3);"></div>
+                <div class=slide-button onclick="ChangeSlide(4);"></div>
+                <div class="slide-skip text-outlined" onclick="ChangeSlideSkip(1);">&#x203A;</div>
             </div>
-            <ul class=navbar>
-                <li id=aboutbar><a href="#aboutme"><p>About</p><img src="images/Logo%20v01.png"></a></li>
-                <li id=gamebar><a href="#games"><p>Games</p><img src="images/nav/games2.png"></a></li>
-                <!-- <img id=middlelogo src="images/Logo%20v02.png"> -->
-                <li id=artbar><a href="#art"><p>2D Art</p><img src="images/nav/art.png"></a></li>
-                <!-- <li><a href="#3d">3D Art</a></li> -->
-                <li id=contactbar><a href="#contact"><p>Contact</p><img src="images/nav/contact.png"></a></li>
-            </ul>
+            
+            <div id=slideshowtext>
+                <p id=name>Tup Luisking</p>
+                <p id=title>Game Developer</p>
+                <div onclick="GoTo('about.html');" id=aboutmebutton>ABOUT ME</div>
+            </div>
         </div>
         
-        <div id=header>
-            <img class=resImage id=headerlogo src="images/Logo%20v02.png">
-            <h>Tup's Portfolio</h>
+        <div class=section id=gamesection>
+            
+            <div class=sectiontop>
+                <div class=sectiondesc>
+                    <p class=descmain>
+                        As you may have guessed... I <span class=highlight>DO</span> develop games :D
+                    </p>
+                    <p class=descsub>
+                        Click on the image to check 'em out ;)
+                    </p>
+                </div>
+            </div>
+            
+            <div id=gamereel-container>
+                
+                <div id=gamereel> 
+                    <div onclick="GoToRandomGame();" id=gamereelimg-container>
+                        <img class=reelimg src="games/ggj2018.png">
+                        <img class=reelimg src="games/peteredout.png">
+                        <img class=reelimg src="games/disclaimer.png">
+                        <img class=reelimg src="games/ballgame.png">
+                        <img class=reelimg src="games/notcaptam.png">
+                        <img class=reelimg src="games/sushi.png">
+                        <img class=reelimg src="games/hbg.png">
+                        <div id=gamereelname>Global Game Job</div>
+                    </div>
+                </div>
+                
+                <div onclick="ShowBadGame();" class=coolbutton id=gamebuttonrandom>
+                    GET NEW RANDOM GAME
+                </div>
+                
+                <div onclick="GoTo('games.html');" class=coolbutton id=gamebuttonredirect>
+                    SEE ALL THE GAMES
+                </div>
+                
+            </div>
         </div>
         
-        <div class=content id=games>
-            <h>Games</h>
+        <div class=section id=artsection>
             
-            <p class=shortDesc>Click on the image or the name to try the game :D</p>
-            
-            <!-- Thesis Game -->
-            <div class=gamePanel>
-                <img class=gameimg 
-                     onclick="openGame(
-                              'https://gamejolt.com/games/PeteredOut/337563'
-                              );"
-                     src="games/Petered%20Out%20Preview.png">
-                <div class=gameInfo>
-                    <a 
-                       href="https://gamejolt.com/games/GlobalGameJob/315389"
-                       target="blank"
-                       class="gameName link">Petered Out</a>
-                    <p class=gameDesc>
-                        Our college group's thesis. Using different POVs, this game will teach you how to deal with individuals with Post-Traumatic Stress Disorder.</p>
+            <div class=sectiontop>
+                <div class=sectiondesc>
+                    <p class=descmain>
+                        <span class=highlight>HOWEVER</span>, you may <span class=highlight>NOT</span> have guessed that I also do (a bit of) art!
+                    </p>
+                    <p class=descsub>
+                        It's art by a developer. Don't expect too much :'(
+                    </p>
+                    <p class=descsub>
+                        (Better experienced through a laptop/desktop)
+                    </p>
                 </div>
             </div>
             
-            
-            <!-- GGJ2018 Game -->
-            <div class=gamePanel>
-                <img class=gameimg 
-                     onclick="openGame(
-                              'https://gamejolt.com/games/GlobalGameJob/315389'
-                              );"
-                     src="games/Global%20Game%20Job%20Preview.png">
-                <div class=gameInfo>
-                    <a 
-                       href="https://gamejolt.com/games/GlobalGameJob/315389"
-                       target="blank"
-                       class="gameName link">Global Game Job</a>
-                    <p class=gameDesc>
-                        GGJ 2018 Entry. You play as an I.T. professional managing the bandwidth for teams participating in the game jam within the game.</p>
-                </div>
-            </div>
-            
-            <!-- Disclaimer Game -->
-            <div id=disclaimergame class=gamePanel>
-                <img class=gameimg 
-                     onclick="openGame(
-                              'https://gamejolt.com/games/disclaimerdtmp/246215'
-                              );"
-                     src="games/Disclaimer%20Don't%20Tell%20My%20Parents%20Preview.png">
-                <div class=gameInfo>
-                    <a 
-                       href="https://gamejolt.com/games/disclaimerdtmp/246215"
-                       target="blank"
-                       class="gameName link">Disclaimer: Don't Tell My Parents</a>
-                    <p class=gameDesc>
-                        You follow the life of a lonely person. Encounters/choices will determine whether you will make or break the only emotional lifelines you have left.</p>
-                </div>
-            </div>
-            
-            <!-- Ball Game -->
-            <div class=gamePanel>
-                <img class=gameimg 
-                     onclick="openGame(
-                              'https://gamejolt.com/games/LiterallyBall/293471'
-                              );"
-                     src="games/Literally%20Ball%20Preview2.png">
-                <div class=gameInfo>
-                    <a 
-                       href="https://gamejolt.com/games/LiterallyBall/293471"
-                       target="blank"
-                       class="gameName link">Literally Ball</a>
-                    <p class=gameDesc>
-                        Good 'ol side-scrolling platformer where you play as a ball with moving animations of more than 4 frames.</p>
-                </div>
-            </div>
-            
-            <!-- Sushi Game -->
-            <div class=gamePanel>
-                <img class=gameimg 
-                     onclick="openGame(
-                              'https://gamejolt.com/games/sushi-game-about-sushi/142532'
-                              );"
-                     src="games/Sushi%20Preview.png">
-                <div class=gameInfo>
-                    <a 
-                       href="https://gamejolt.com/games/sushi-game-about-sushi/142532"
-                       target="blank"
-                       class="gameName link">Sushi Game About Sushi</a>
-                    <p class=gameDesc>
-                        You are a sushi trying to avoid the chopsticks until closing time. Good luck!</p>
-                </div>
-            </div>
-            
-            <!-- Captain Game -->
-            <div class=gamePanel>
-                <img class=gameimg 
-                     onclick="openGame(
-                              'https://gamejolt.com/games/NotSteveRogers/286914'
-                              );"
-                     src="games/Totally%20Not%20Captain%20America%20Preview.png">
-                <div class=gameInfo>
-                    <a 
-                       href="https://gamejolt.com/games/NotSteveRogers/286914"
-                       target="blank"
-                       class="gameName link">Totally Not Captain America</a>
-                    <p class=gameDesc>
-                        You play as Not Captain America, running through Hydro’s headquarters and beating the henchmen in order to defeat the boss, Rad Skull.</p>
-                </div>
-            </div>
-            
-            <!-- Birthgame -->
-            <div class=gamePanel>
-                <img class=gameimg 
-                     onclick="openGame(
-                              'https://gamejolt.com/games/happy-birthgame-to-you/125628'
-                              );"
-                     src="games/Happy%20Birthgame%20To%20You%20Preview.png">
-                <div class=gameInfo>
-                    <a 
-                       href="https://gamejolt.com/games/happy-birthgame-to-you/125628"
-                       target="blank"
-                       class="gameName link">Happy Birthgame</a>
-                    <p class=gameDesc>
-                        Together with your companion, and your awesome weapon, defeat all the enemies and their boss at the end.</p>
-                </div>
-            </div>
-            
-        </div>
-        
-        <div class=content id=art>
-            <h>2D Art</h>
-            
-            <p class=shortDesc>Hover over the images for more animations :)</p>
-            
-            <div id=artCompilation>
-               
-                <div id=pugly class=artSquare>
-                    <img 
-                         onmouseover="changeImage(this,'Pugly Sleeping.gif');"
-                         onmouseout="changeImage(this,'Pugly Running.gif');"
-                         src="images/art/Pugly%20Running.gif">
-                    <p>Pugly</p>
-                </div>
+            <div id=artscene>
                 
-                <div id=spider class=artSquare>
-                    <img 
-                         onmouseover="changeImage(this,'Spider-Man Homecoming Running.gif');"
-                         onmouseout="changeImage(this,'Spider-Man Homecoming Idle.gif');"
-                         src="images/art/Spider-Man%20Homecoming%20Idle.gif">
-                    <p>Spider-Man Homecoming</p>
-                </div>
-                
-                <div id=ball class=artSquare>
-                    <img 
-                         onmouseover="changeImage(this,'CUTE BALL Rolling.gif');"
-                         onmouseout="changeImage(this,'CUTE BALL Idle.gif');"
-                         src="images/art/CUTE%20BALL%20Idle.gif">
-                    <p>Ball Guy</p>
-                </div>
-                
-                <div id=pizza class=artSquare>
-                    <img 
-                         onmouseover="changeImage(this,'Pizza Man Running.gif');"
-                         onmouseout="changeImage(this,'Pizza Man Idle.gif');"
-                         src="images/art/Pizza%20Man%20Idle.gif">
-                    <p>Pizza-Man Coming Home</p>
-                </div>
-                
-                <div id=sushi class=artSquare>
-                    <img 
-                         onmouseover="changeImage(this,'Sushi Cutie.gif');"
-                         onmouseout="changeImage(this,'Sushi Idle.gif');"
-                         src="images/art/Sushi%20Idle.gif">
-                    <p>Sushi</p>
-                </div>
-                
-                <div id=capt class=artSquare>
-                    <img 
-                         onmouseover="changeImage(this,'Capt Running.gif');"
-                         onmouseout="changeImage(this,'Capt Idle.gif');"
-                         src="images/art/Capt%20Idle.gif">
-                    <p>Not Steve</p>
-                </div>
-                
-            </div>
-            
-        </div>
-        
-        <!-- 3D Section
-        <div class=content id=three-d>
-            <h>3D Art</h>
-            
-            <p class=shortDesc>Click to view in another window ^_^</p>
-            
-        </div>
-        -->
-        
-        <div class=content id=aboutme>
-            <h>About Me</h>
-            
-            <p class=shortDesc>Hover on the + signs to expand ^u^</p>
-            
-            <img 
-                 onmouseover="changePortrait(this, 'portrait-pixel.png');"
-                 onmouseout="changePortrait(this, 'portrait-normal.png');"
-                 id=portrait src="images/portrait-normal.png">
-            <div id=desc>
-                <p>
-                    Hi! I'm Richard Luisking but you can call me Tup. :D 
-                    <br><br>
-                    I am currently taking up BS Computer Science in Ateneo de Manila University. I am a game developer from the Philippines and I've been developing games for about 3 years. I work well alone or with a team. I have mostly worked on 2D games using the <a class=link href="https://unity3d.com/" target="_blank">Unity</a> game engine but I am always eager to learn new things.
-                    <br><br>
-<!--
-                    <br><br>
-                    For more information about my experiences in the industry / education / etc., please check out my <a class=link href="https://docs.google.com/document/d/13Qo4xQr_W5WwVmGu7mtmr3HcA5MpNcGcNdO2eY7EeF0/edit#" target="blank">résumé</a>. Thank you! ^_^
--->
+                <div id=artball>
                     
-                </p>
-            </div>
-            
-            <div class=dropDown>
-                + Experience
-                <ul>
-                    <li>Software Engineering Intern @ Anino</li>
-                    <li>Freelance Work @ ADMU</li>
-                    <li>CompSAt Senior Game Developer @ ADMU</li>
-                </ul>
-            </div>
-            
-             <div class=dropDown>
-                + Awards
-                <ul>
-                    <li>Blue Hacks 2016: 1st Place @ ADMU</li>
-                    <li>Blue Hacks 2017: 3rd Place @ ADMU</li>
-                    <li>Top 5 Games @ GGJ2018 (FEU)</li>
-                    <li>Judge's Choice @ GGJ2018 (FEU)</li>
-                </ul>
-            </div>
-            
-             <div class=dropDown>
-                + Skills
-                <ul>
-                    <li>Game Programming</li>
-                    <li>Game Design</li>
-                    <li>Pixel Art and Animations</li>
-                    <li>3D Modelling</li>
-                </ul>
+                </div>
+                
+                <div class=movebutton id=moveleft onmouseover="MoveLeft();" onmouseout="StopLeft();">
+                    MOVE LEFT
+                </div>
+                
+                <div onclick="GoTo('art.html');" class=coolbutton id=artredirect>
+                    SEE ALL THE ART
+                </div>
+                
+                <div class=movebutton id=moveright onmouseover="MoveRight();" onmouseout="StopRight();">
+                    MOVE RIGHT
+                </div>
             </div>
             
         </div>
         
-        <div class=content id=contact>
-            <h>Contact</h>
+        <div class=section id=contactsection>
+        
+            <div class=sectiontop>
+                <div class=sectiondesc>
+                    <p class=descmain>
+                        Here is <span class=highlight>ONE</span> way of contacting me :D
+                    </p>
+                    <p class=descsub>
+                        It might look off center... but it <span class=bold>AIN'T</span> :O ;)
+                    </p>
+                </div>
+            </div>
             
-<!--            <p class=shortDesc>Call me maybe ;)</p>-->
+            <div id=email-container>
+                  
+                <div id=email>
+                    <div id=emailleft>ramon.luisking14</div><!--
+                    --><span id=emailleftspace>ramon.luisking14</span><!--
+                    --><span id=emailmiddle>@</span><!--
+                    --><span id=emailrightspace>gmail.com</span><!--
+                    --><div id=emailright>gmail.com</div>
+                </div>  
+                
+            </div>
             
-            <div id=desc>
-                <p>
-                    Phone: +63 917 790 6123 <br>
-                    E-mail: ramon.luisking14@gmail.com <br>
-                    Facebook: <a class=link href="https://www.facebook.com/richard.luisking" target="blank">Tup Luisking</a> <br>
-                    Game Jolt: <a class=link href="https://gamejolt.com/@RichardL" target="blank">@RichardL</a>
-                </p>
+            
+            <div onclick="GoTo('contact.html');" class=coolbutton id=contactredirect>
+                LET'S TALK MORE
             </div>
             
         </div>
         
-        <div id=footer>© Tup Luisking 2018</div>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/2.0.0/jquery.localScroll.min.js"></script>
-        <script src="script.js"></script>
+        <!-- FOOTER GOES HERE -->
+        <div id=footer-container></div>
         
     </body>
     

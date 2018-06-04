@@ -1,0 +1,2773 @@
+$navbar-height: 50px;
+$navbar-height-mobile: 40px; 
+
+$blue: #338bd5;
+$bluehover: #1169b3;
+$darkblue: #2d1f93;
+$darkbluehover: #0b0d72;
+$darkgrey: #2e2e2e;
+$darkergrey: #1b1b1b;
+
+// Add terrain color palette
+$forest: #7fbf7f;
+$water: #7fbfbf;
+$grass: #a1d66e;
+$soil: #d6a36e;
+$dirt: #a18c76;
+
+$gold: #cfb53b;
+$golddark: #ad9319;
+$silver: #e6e8fa;
+$silverdark: #c4d6d8;
+$bronze: #8c7853;
+$bronzedark: #6a5631;
+
+$email-transition: 0.5s;
+$fb-transition: 0.5s;
+
+html,
+body {
+    
+    padding: 0;
+    margin: 0;
+    
+    background: black;
+    color: black;
+    
+    font-family: "Pixel Font";
+    font-size: 20px;
+    
+//    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    
+    width: 0px;
+    background: transparent;
+}
+
+p,
+a {
+    
+    margin: 0;
+    padding: 0;
+}
+
+#navbar-container {
+    
+    height: $navbar-height;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    transition: 0.5s;
+    
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    
+    #navbar-logo {
+        
+        height: 69%;
+        
+        margin-left: 20px;
+        
+        img {
+            
+            height: 100%;
+            width: auto;
+        }
+    }
+    
+    #navbar {
+        
+        padding: 10px 20px 10px 20px;
+        
+        a {
+            
+            transition: 0.5s;
+
+            margin-left: 20px;
+            
+            color: white;
+            
+            text-decoration: none;
+        }
+    }
+    
+    #navsandwich {
+        
+        display: none;
+        -webkit-display: none;
+        
+        height: 100%;
+        
+        padding: 0 20px 0 20px;
+        
+        color: white;
+        
+        position: relative;
+        
+        #bars{
+            
+            position: absolute;
+            
+            top: 50%;
+            left: 50%;
+            
+            transform: translate(-50%, -50%);
+            
+            padding-right: 20px;
+            
+            .bar {
+
+                width: 25px;
+                height: 2.5px;
+
+                margin: 2px;
+
+                background: white;
+
+                border: 1px solid black;
+                
+                transition: 0.5s;
+            }
+        }
+        
+        #sandwichmenu {
+            
+            position: absolute;
+            
+            top: 100%;
+            right: 0;
+            
+            display: flex;
+            flex-direction: column;
+            
+            text-align: right;
+            
+            transition: 0.5s;
+
+            overflow: hidden;
+            
+            max-height: 0;    
+            
+            border-bottom-left-radius: 10px;
+            
+            a {
+                
+                font-size: 1.5em;
+                
+                padding: 10px 20px 10px 20px;
+                
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+    
+}
+
+#slideshow {
+
+    height: 500px;
+    
+    position: relative;
+    
+    .slide {
+        
+        height: 100%;
+        width: 100%;
+        
+        background-color: rgba(0,0,0, 0.420);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        
+        transition: 1s;
+    }
+    
+    #slide1 {
+        
+        background-image: url('images/banners/peteredout.png');
+        opacity: 1;
+    }
+    
+    #slide2 {
+        
+        background-image: url('images/banners/ggj2018.png');
+        opacity: 0;
+    }
+    
+    #slide3 {
+        
+        background-image: url('images/banners/disclaimer.png');
+        opacity: 0;
+    }
+    
+    #slide4 {
+        
+        background-image: url('images/banners/literallyball.png');
+        opacity: 0;
+    }
+    
+    #slide5 {
+        
+        background-image: url('images/banners/sushigame.png');
+        opacity: 0;
+    }
+    
+    #slideoverlay {
+        
+        background-color: rgba(0,0,0,0.50);
+        
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        
+        z-index: 1;
+    }
+    
+    #slide-buttons {
+        
+        margin-bottom: 50px;
+        
+        width: 100%;
+        
+        position: absolute;
+        bottom: 0;
+        
+        z-index: 2;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        .slide-skip {
+            
+            margin: 0 20px 0 20px;
+            transform: scale(4);
+            
+            color: white;
+            
+            cursor: pointer;
+        }
+        
+        .slide-button {
+            
+            cursor: pointer;
+            
+            width: 10px;
+            height: 10px;
+            
+            margin: 0 15px 0 15px;
+            
+            border: 3px solid black;
+            background: white;
+            border-radius: 50%;
+            
+            transition: 1s;
+        }
+    }
+    
+    #slideshowtext {
+        
+        color: white;
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        
+        transform: translate(-50%, -50%);
+        
+        z-index: 3;
+        
+        text-align: center;
+        
+        padding: 20px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        padding: 20px;
+        
+        #name {
+            
+            white-space: nowrap;
+            font-size: 4em;
+            font-weight: bold;
+            
+//            text-shadow: 
+//                -4px -4px 4px black, 
+//                4px -4px 4px black,
+//                4px 4px 4px black,
+//                -4px 4px 4px black,
+//                -4px 0 4px black, 
+//                0 -4px 4px black,
+//                4px 0 4px black,
+//                0 4px 4px black; 
+        }
+        
+        #title {
+            
+            font-size: 1.5em;
+        }
+        
+        #aboutmebutton {
+            
+            cursor: pointer;
+            
+            height: 50px;
+            width: 150px;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            margin-top: 50px;
+            
+            background: $forest;
+            
+            border-radius: 7.5px;
+            border: 3px solid black;
+            
+            color: white;
+            text-decoration: none;
+        }
+        
+        #aboutmebutton:hover {
+            
+            background: $grass;
+            color: black;
+        }
+    }
+}
+
+.section {
+    
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    font-size: 1.5em;
+    
+    .sectiontop {
+        
+        width: 100%;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+     
+        margin-bottom: 20px;
+        
+        .sectiondesc {
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            
+            .descmain {
+                
+                font-size: 1.25em;
+            }
+            
+            .descsub:before {
+                
+                content: " > ";
+            }
+            
+            .descsub {
+                
+                margin-top: 5px;
+                font-size: 0.85em;
+            }
+        }
+    }
+}
+
+.coolbutton {
+
+    font-size: 1.125em;
+    width: 275px;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    margin-bottom: 16px;
+    padding: 15px;
+
+    background: black;
+    color: white;
+
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 0 10px white;
+}
+
+.coolbutton:hover {
+
+    color: lightgray;
+}
+
+.coolbutton:active {
+
+    transform: translateY(6px);
+    box-shadow: 0 4px white;
+}
+
+#gamesection {
+    
+    background-color: $water;
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    
+    #gamereel-container {
+        
+        display: grid;
+        grid-template-columns: 0.25fr 1fr 1fr 0.25fr;
+        grid-template-rows: 0.25fr 1fr 1fr 0.25fr;
+        grid-template-areas:
+            ". .            gamereel ."
+            ". gamerandom   gamereel ."
+            ". gameredirect gamereel ."
+            ". .            gamereel .";
+        align-items: center;
+        justify-items: center;
+        grid-gap: 50px;
+        
+        #gamereel {
+            
+            grid-area: gamereel;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            #gamereelimg-container {
+
+                cursor: pointer;
+
+                margin: 20px;
+
+                background: grey;
+
+                width: 325px;
+                height: 325px;
+
+                border-radius: 7.5px;
+                border: 4px solid white;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                overflow: hidden;
+
+                position: relative;
+                
+                #gamereelimg {
+
+                    height: 100%;
+                    width: auto;
+                }
+                
+                .reelimg {
+                    
+                    position: absolute;
+                    
+                    height: 100%;
+                    width: auto;
+
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    
+                    visibility: hidden;
+                }
+                
+                .reelimg:nth-child(1) {
+                    
+                    visibility: visible;
+                }
+                
+                #gamereelname {
+                    
+                    font-size: 1.125em;
+                    
+                    width: 100%;
+                    text-align: center;
+                    
+                    background-color: rgba(0,0,0,0.420);
+                    
+                    position: absolute;
+                    bottom: 0;
+                    
+                    z-index: 1;
+                    
+                    padding: 7.5px;
+                }
+            }
+        }
+        
+        #gamebuttonrandom {
+            
+            grid-area: gamerandom;
+        }
+        
+        #gamebuttonredirect {
+            
+            grid-area: gameredirect;
+            
+            margin-top: 10px;
+        }
+    }
+}
+
+#artsection {
+    
+    background: $grass;
+    
+    #artscene {
+        
+        position: relative;
+        
+        height: 200px;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        #artball {
+            
+            background-image: url("images/art/CUTE%20BALL%20Idle.gif");
+            background-size: contain;
+            
+            height: 200px;
+            width: 200px;
+            
+            position: absolute;
+            left: 20%;
+            
+            z-index: 1;
+            
+            transform: translate(-50%);
+        }
+        
+        .movebutton {
+            
+            position: absolute;
+            z-index: 2;
+            
+            padding: 5px;
+            
+            width: 69px;
+            
+            text-align: center;
+            
+            background: rgba(0,0,0,0.42);
+            color: white;
+        }
+        
+        #moveleft {
+            
+            left: 0;
+        }
+        
+        #moveright {
+            
+            right: 0;
+        }
+    }
+}
+
+#contactsection {
+    
+    background: $soil;
+    
+    align-items: center;
+    
+    #email-container {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        margin: 10px 0 10px 0;
+        padding: 20px;
+        
+        border-top: 5px solid black;
+        border-bottom: 5px solid black;
+    }
+    
+    #contactredirect {
+        
+        margin-top: 20px;
+    }
+}
+
+#footer {
+    
+    border-top: 1px solid white;
+    
+    background: black;
+    color: white;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    font-size: 1em;
+    
+    #footerleft {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+        a {
+            
+            color: white;
+            text-decoration: none;
+            
+            margin-bottom: 5px;
+        }
+    }
+
+    #footerright {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+}
+
+.page {
+    
+    display: flex;
+    flex-direction: column;
+    
+//    min-height: 2000px;
+    
+    padding-top: $navbar-height;
+    
+    .pageheader {
+        
+        text-align: center;
+        
+        font-size: 2.5em;
+        
+        font-weight: bold;
+        
+        padding: 10px 0 10px 0;
+        
+        background: black;
+        
+        border-top: 5px solid white;
+        border-bottom: 5px solid white;
+        
+        position: relative;
+        
+        color: white;
+        
+        #pageheadersub {
+            
+            margin-top: 5px;
+            
+            font-size: 0.3em;
+            
+            font-weight: normal;
+            
+            position: absolute;
+            
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            
+            color: black;
+            
+            z-index: 2;
+            
+            white-space: nowrap;
+        }
+    }
+    
+    .pageheader:after {
+        
+        content: "";
+        
+        height: 0;
+        width: 250px;
+
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        
+        z-index: 1;
+        
+        transform: translateX(-50%);
+        
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 25px solid white;
+    }
+}
+
+#aboutpage {
+    
+    background: $forest;
+    
+    .segmentbg {
+
+        background-color: rgba(0,0,0,0.5);  
+
+        height: 350px;
+
+        position: relative;
+        
+        .segment-title {
+            
+            position: absolute;
+            
+            left: 0;
+            bottom: 0;
+            
+            padding: 25px;
+            
+            font-size: 2em;
+            font-weight: bold;
+            
+            color: white;
+        }
+    }
+
+    .segmentdesc {
+
+        padding: 25px;
+    }
+    
+    .dialogue {
+       
+        display: grid;
+        grid-template-columns: auto auto;
+        
+        grid-gap: 25px;
+        
+        align-items: start;
+        
+        border-radius: 10px;
+        border: 5px double black;
+
+        background: $grass;
+        
+        padding: 25px;
+        
+        .portrait {
+
+            height: 150px;
+            width: 150px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 50%;
+            border: 5px solid black;
+
+            transition: 0.25s;
+
+            img {
+
+                position: absolute;
+
+                height: 100%;
+                width: 100%;
+            }
+
+            #normalportrait {
+
+                z-index: 1;
+
+                transition: 0.25s;
+            }
+        }
+
+        .portrait:hover {
+
+            transform: rotate(360deg);
+
+            #normalportrait {
+
+                opacity: 0;
+            }
+        }
+
+        .actualdesc {
+
+            text-align: justify;
+            
+            .descname {
+
+                font-size: 1.75em;
+            }
+
+            .descpacito {
+
+                font-size: 1.25em;
+                margin-top: 5px;
+            }
+
+            a {
+
+                color: darkgreen;
+            }
+        }
+    }
+    
+    .smalldialogue {
+        
+        padding: 25px;
+        
+        background: $water;
+        
+        border: 5px double black;
+        border-radius: 10px;
+        
+        font-size: 1.25em;
+        
+        transition: 0.5s;
+        
+        opacity: 0;
+    }
+    
+    .smalldialogue:nth-child(2),
+    .smalldialogue:nth-child(3) {
+        
+        opacity: 1;
+    }
+    
+    #mesegment {
+        
+        #mebg {
+
+            background-image: url("images/about/laptop.jpeg");
+        }
+
+        #testimonial-label {
+            
+            margin: 10px;
+            
+            font-size: 2em;
+        }
+    }
+    
+    #schoolsegment {
+        
+        #schoolbg {
+            
+            background-image: url("images/about/admu.jpg");
+        }
+        
+        #schoolcontent {
+            
+            display: grid;
+            grid-template-areas:
+                "lvlup skills skills skills"
+                "char skills skills skills";
+            grid-gap: 20px;
+            
+            justify-items: start;
+            
+            #lvlup {
+                
+                grid-area: lvlup;
+                
+                justify-self: center;
+                
+                text-align: center;
+                
+                width: 100%;
+                
+                font-size: 1.5em;
+                
+                #lvlup-label {
+                    
+                    color: white;
+                }
+                
+                #lvlup-title {
+                    
+                }
+                
+                #lvlup-school {
+                    
+                    font-size: 0.75em;
+                }
+            }
+            
+            #char-container {
+                
+                grid-area: char;
+                
+                width: 200px;
+                height: 200px;
+
+                background-color: rgba(255,255,255,0.5);
+                
+                border-radius: 10px;
+                border: 10px double black;
+                
+                justify-self: center;
+                
+                #char {
+
+                    height: 100%;
+                    width: auto;
+                }
+            }   
+            
+            #skills {
+                
+                width: 100%;
+                
+                grid-area: skills;
+                
+                align-self: center;
+                
+                #skill-label {
+                    
+                    font-size: 1.75em;
+                }
+                
+                .skill {
+                    
+                    font-size: 1.5em;
+                }
+            }
+        }
+        
+    }
+    
+    #expsegment {
+        
+        #expbg {
+            
+            background-image: url("images/about/gamedevtycoon.jpg");
+        }
+        
+        #expdesc {
+            
+            #expbar {
+                
+                height: 20px;
+                
+                border: 3px solid black;
+                border-radius: 25px;
+                
+                background: black;
+                
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                
+                padding: 5px;
+                
+                position: relative;
+                
+                #expfill {
+                    
+                    border-radius: 25px;
+                    
+                    height: 100%;
+                    width: 69%;
+                    
+                    background: $water;
+                }
+                
+                .expmark {
+                    
+                    height: 150%;
+                    width: 8px;
+                    
+                    background: black;
+                    
+                    border-radius: 25px;
+                    border: 2px solid white;
+                    
+                    position: absolute;
+                    
+                    top: 50%;
+                    
+                    transform: translate(-50%, -50%);
+                    
+                    z-index: 1;
+                    
+                    cursor: pointer;
+                }
+                
+                #exp1 {
+                    
+                    left: 26%;
+                }
+                
+                #exp2 {
+                    
+                    left: 35%;
+                }
+                
+                #exp3 {
+                    
+                    left: 48%;
+                }
+                
+                #exp4 {
+                    
+                    left: 69%;
+                }
+            }
+            
+            #expdetails {
+                
+                min-height: 300px;
+                
+                margin-top: 10px;
+                padding: 25px;
+                
+                position: relative;
+                
+                background: white;
+                
+                border: 10px double black;
+                border-radius: 10px;
+                
+                #expoverlay {
+                    
+                    position: absolute;
+                    
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    background: rgba(0,0,0,0.5);
+                    
+                    transition: 1s;
+                    
+                    padding: 25px;
+                    
+                    p {
+                        
+                        font-size: 2em;
+                        
+                        color: white;
+                        
+                        text-align: center;
+                    }
+                }
+                
+                #exptitle {
+                    
+                    font-size: 2.5em;
+                    font-style: bold;
+                }
+                
+                #expplace {
+                    
+                    font-size: 1.5em;
+                    font-style: italic;
+                }
+                
+                #expdate {
+                    
+                    font-size: 1.125em;
+                }
+                
+                #expinfo {
+                    
+                    font-size: 1.4em;
+                    
+                    text-align: justify;
+                    
+                    margin-top: 10px;
+                    padding-top: 5px;
+                    
+                    border-top: 1px dashed black;
+                }
+            }
+        }
+    }
+    
+    #compsegment {
+        
+        #compbg {
+            
+            background-image: url("images/about/victory.jpg");
+        }
+        
+        #compdesc {
+            
+            #medals {
+                
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-content: center;
+                
+                .comppanel:nth-child(1) {
+                    
+                    order: 1;
+                }
+                
+                .comppanel:nth-child(3) {
+                    
+                    order: 2;
+                }
+                
+                .comppanel {
+                
+                    display: grid;
+                    grid-template-rows: 150px 100px;
+                    
+                    justify-items: center;
+                    align-items: center;
+                    
+                    width: 150px;
+                    
+                    padding: 25px;
+                    
+                    background: green;
+                    
+                    color: white;
+                    
+                    border: 12px solid sandybrown;
+                    border-radius: 7.5px;
+                    
+                    .medal {
+
+                        height: 80px;
+                        width: 80px;
+
+                        border-radius: 50%;
+                        border-width: 20px;
+                        border-style: double;
+
+                        transition: 0.5s;
+
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+
+                        font-size: 2em;
+                        font-weight: bolder;
+                    }   
+
+                    .compinfo {
+                        
+                        font-size: 1.5em;
+                        text-align: center;
+                        
+                    }
+
+                    #goldmedal {
+
+                        height: 100px;
+                        width: 100px;
+                        
+                        border-color: $gold;
+                        color: $golddark;
+
+                        background-color: gold;
+                        
+                        font-size: 2.75em;
+                    }
+
+                    #silvermedal {
+
+                        border-color: $silverdark;
+                        color: silver;
+
+                        background-color: $silver;
+                    }
+
+                    #bronzemedal {
+
+                        height: 70px;
+                        width: 70px;
+                        
+                        border-color: $bronze;
+                        color: $bronzedark;
+
+                        background-color: sandybrown;
+                        
+                        font-size: 1.75em;
+                    }
+                }
+            }
+            
+            #certs {
+
+                padding: 25px;
+                
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                
+                grid-gap: 25px;
+                
+                justify-items: center;
+                align-items: center;
+                
+                .cert {
+                    
+                    width: 225px;
+                    height: 80px;
+                    
+                    padding: 50px 25px 50px 25px;
+                    
+                    border: 22.2px double black;
+                    
+                    background: beige;
+                    
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    text-align: center;
+                    
+                    .certtitle {
+                        
+                        border-bottom: 1px dashed black;
+                        
+                        font-size: 1.75em;
+                        font-family: "DP Comic";
+                    }
+                    
+                    .certdetails {
+                        
+                        font-size: 1.25em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#gamepage {
+    
+    background: $water;
+    
+    position: relative;
+    
+    .pageheader {
+        
+        margin-bottom: 25px;
+    }
+    
+    #gamereel-container {
+        
+        overflow-x: hidden;
+        
+        margin-top: 25px;
+        
+        #gamereel {
+            
+            cursor: pointer;
+            
+            position: relative;
+            
+            width: 300px;
+            height: 175px;
+            
+            margin-left: 150px;
+            
+            #play-button {
+                
+                position: absolute;
+                z-index: 5;
+                
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: flex-end;
+                
+                p {
+                    
+                    padding: 20px;
+                    
+                    font-size: 1em;
+                    font-family: "DP Comic";
+                    
+                    color: white;
+                    opacity: 0;   
+                }
+            }
+            
+            #play-button:hover {
+                
+                p {
+                    
+                    opacity: 1;
+                }
+            }
+            
+            .reelitem {
+                
+                background: rgba(0,0,0,0.420);
+
+                width: 300px;
+                height: 175px;
+                
+                position: absolute;
+                
+                transition: 0.5s;
+                
+                box-sizing: border-box;
+                
+                overflow: hidden;
+                
+                img {
+                    
+                    width: 100%;
+                    
+                    position: absolute;
+                    
+                    top: 50%;
+                    left: 50%;
+                    
+                    transform: translate(-50%, -50%);
+                }
+                
+                .screenshot {
+                    
+                    z-index: 0;
+                }
+                
+                .preview {
+                    
+                    transition: 0.5s;
+                    
+                    z-index: 1;
+                    opacity: 0;
+                }
+            }
+            
+            .reelmove {
+                
+                position: absolute;
+                
+                top: 50%;
+                transform: translateY(-50%) scaleY(2);
+                
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                
+                cursor: pointer;
+                
+                color: white;
+                font-weight: bold;
+                
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            
+            #reelleft {
+                
+                right: 101%;
+            }
+            
+            #reelright {
+                
+                left: 101%;
+            }
+        }
+    }
+    
+    #game-details {
+        
+        padding: 25px 50px 40px 50px;
+        
+        #game-name {
+            
+            font-size: 2.5em;
+            
+            font-weight: bold;
+        }
+        
+        #game-mentions {
+            
+            font-size: 1.125em;
+            
+            margin-bottom: 10px;
+            
+            text-align: justify;
+        }
+        
+        #game-info {
+            
+            font-size: 1.5em;
+            
+            text-align: justify;
+        }
+    }
+}
+
+#artpage {
+    
+    background: $grass;
+    
+    #art-compilation {
+        
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "pug spidey spidey pizza pizza sushi"
+            "ball spidey spidey pizza pizza capt";
+        grid-gap: 1vw;
+        
+        margin: 25px;
+        margin-top: 50px;
+        
+        .art-panel {
+            
+            position: relative;
+            
+            background: rgba(255,255,255,0.5);
+            
+            transition: 0.25s;
+            
+            .filler {
+                
+                width: 100%;
+                opacity: 0;
+            }
+            
+            .idle,
+            .moving {
+
+                height: 90%;
+                width: auto;
+                
+                position: absolute;
+                z-index: 1;
+                
+                top: 50%;
+                left: 50%;
+                
+                transform: translate(-50%, -50%) scale(0.9);
+            }
+            
+            .moving {
+                
+                opacity: 0;
+            }
+            
+            .art-name {
+                
+                font-size: 1.25em;
+                font-weight: bold;
+//                font-family: "DP Comic";
+                
+                position: absolute;
+                
+                bottom: 10px;
+                z-index: 2;
+                
+                width: 100%;
+                
+                text-align: center;
+                
+                opacity: 0;
+                
+                transition: 0.25s;
+            
+            }
+        }
+        
+        .art-panel:hover {
+            
+            background: rgba(255,255,255,0.75);
+            
+            .idle {
+                
+                opacity: 0;
+            }
+            
+            .moving {
+                
+                opacity: 1;
+            }
+            
+            .art-name {
+                
+                opacity: 1;
+            }
+        }
+        
+        #capt {
+            
+            grid-area: capt;
+        }
+        
+        #ball {
+            
+            grid-area: ball;
+        }
+        
+        #pizza {
+            
+            grid-area: pizza;
+        }
+        
+        #spidey {
+            
+            grid-area: spidey;
+        }
+        
+        #sushi {
+            
+            grid-area: sushi;
+        }
+        
+        #pug {
+            
+            grid-area: pug;
+        }
+    }
+    
+//    #char-select {
+//        
+//        padding: 25px;
+//        padding-top: 50px;
+//        
+////        font-family: "Husky Stash";
+//        font-family: "DP Comic";
+//        font-size: 3em;
+//        
+//        text-align: center;
+//        
+//        #chars {
+//            
+//            display: flex;
+//            flex-flow: row wrap;
+//            justify-content: center;
+//            align-items: center;
+//            align-content: center;
+//            
+//            .char {
+//
+//                cursor: pointer;
+//                
+//                width: 80px;
+//                height: 80px;
+//                
+//                background-color: white;
+//                
+//                border: 5px double black;
+//                
+//                margin: 5px;
+//                
+//                img {
+//                    
+//                    height: 100%;
+//                    width: auto;
+//                }
+//            }    
+//        }
+//    }
+//    
+//    #scene {
+//        
+//        position: relative;
+//        
+//        border-top: 5px solid black;
+//        border-bottom: 5px solid black;
+//        
+//        #forest {
+//            
+//            height: 200px;
+//            
+//            background: $forest;
+//        }
+//        
+//        #water {
+//            
+//            height: 50px;
+//            
+//            background: $water;
+//        }
+//        
+//        #soil {
+//            
+//            height: 75px;
+//            
+//            background: $soil;
+//        }
+//        
+//        #char-container {
+//        
+//            position: absolute;
+//            
+//            left: 50%;
+//            bottom: 25px;
+//            
+//            transform: translateX(-50%);
+//            
+//            height: 200px;
+//            
+//            img {
+//                
+//                height: 100%;
+//                width: auto;
+//            }
+//        }
+//    }
+//    
+//    #controls-container {
+//        
+//        display: flex;
+//        flex-direction: row;
+//        justify-content: center;
+//        align-items: center;
+//        
+//        margin: 25px 0 25px 0;
+//        
+//        #controls {
+//
+//            display: flex;
+//            flex-direction: row;
+//            justify-content: space-around;
+//            align-items: center;
+//            
+//            width: 400px;
+//            
+//            .control-panel {
+//                
+//                display: grid;
+//                
+//                justify-items: center;
+//                align-items: center;
+//                
+//                .c-button {
+//                    
+//                    width: 50px;
+//                    height: 50px;
+//                    
+//                    display: flex;
+//                    flex-direction: row;
+//                    align-items: center;
+//                    justify-content: center;
+//                    
+//                    background: black;
+//                    color: white;
+//                    
+//                    font-size: 1.5em;
+//                    
+//                    border-radius: 50%;
+//                    border: 5px solid white;
+//                    
+//                    box-shadow: 0 10px white;
+//                }
+//                
+//                .c-button:hover {
+//                    
+//                    transform: translateY(5px);
+//                    box-shadow: 0 5px white;
+//                }
+//            }
+//            
+//            #actions {
+//                
+//                grid-template-areas:
+//                    "spec ."
+//                    ". jump";
+//                
+//                #action-special {
+//                    
+//                    grid-area: spec;
+//                }
+//                
+//                #action-jump {
+//                    
+//                    grid-area: jump;
+//                }
+//            }
+//            
+//            #movement {
+//                
+//                grid-template-areas:
+//                    ". right"
+//                    "left .";
+//                
+//                #move-left {
+//                    
+//                    grid-area: left;
+//                }
+//                
+//                #move-right {
+//                    
+//                    grid-area: right;
+//                }
+//            }
+//        }
+//    }
+}
+
+#contactpage {
+    
+    background: $soil;
+    
+    #contacts {
+        
+        padding: 50px 0 50px 0;
+        
+        display: grid;
+        grid-template-areas:
+            ". . phone .        .       . . "
+            ". . phone email    email   . ."
+            ". . phone fb       fb      . ."
+            ". . phone .        .       . . ";
+        grid-gap: 25px;
+        align-items: center;
+        justify-items: center;
+
+        
+        #phone-container {
+            
+            grid-area: phone;
+            
+            #phone {
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                
+                height: 300px;
+                width: 165px;
+                
+                background: #112233;
+                
+                border: 8px solid black;
+                border-radius: 5px;
+                
+                position: relative;
+                
+                #notch {
+                    
+                    position: absolute;
+                    top: 0;
+                    
+                    width: 75px;
+                    height: 0;
+                    
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 10px solid black;
+                    
+                    z-index: 1;
+                }
+                
+                #screen {
+                
+                    height: 100%;
+                    width: 100%;
+                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    
+                    background: #eeeeff;
+                    
+                    transition: 0.25s;
+                    
+                    opacity: 0;
+                    
+                    #photo {
+                        
+                        height: 150px;
+                        width: 100%;
+                        
+                        text-align: left;
+                        
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        align-items: flex-start;
+                        
+                        background-image: url("images/contact/contactphoto.jpg");
+                        background-position: top center;
+                        background-size: 200%;
+                        
+                        p {
+                           
+                            color: white;
+                            padding: 10px;
+                        }
+                    }
+                    
+                    #details-container {
+                        
+                        width: 100%;
+                        
+                        #details {
+
+                            margin: 5px;
+                            padding: 5px;
+                            
+                            font-size: 1em;
+
+                            background: white;
+
+                            border-radius: 5px;
+                        }
+                    }
+                    
+                }
+                
+                #button {
+                    
+                    width: 100%;
+                    text-align: center;
+                    
+                    background: black;
+                    color: white;
+                }
+            }
+            
+            #phone:hover {
+                
+                #screen {
+                    
+                    opacity: 1;
+                }
+            }
+        }
+        
+        #email-container {
+            
+            grid-area: email;
+            
+            #email {
+                
+                font-size: 2.25em;
+            }
+        }
+        
+        #fbar-container {
+            
+            grid-area: fb;
+            
+            #fbar {
+            
+                position: relative;
+                
+                font-size: 1.75em;
+                
+                display: inline-block;
+                
+                padding: 5px 69px 5px 69px;
+
+                text-align: center;
+            
+                background: white;
+                
+                border-radius: 10px;
+                border: 5px double black;
+                
+                #fb-label {
+
+                    width: 100%;
+                    
+                    transition: $fb-transition;
+                    
+                    position: absolute;
+                    
+                    top: 50%;
+                    left: 50%;
+                    
+                    transform-origin: right center;
+                    
+                    transform: translate(-50%, -50%);// rotateY(90deg);
+                }
+
+                #fb-link-space {
+
+                    opacity: 0;
+                }
+
+                #fb-link {
+
+                    width: 100%;
+                    
+                    color: black;
+                    
+                    text-decoration: none;
+                    
+                    transition: $fb-transition;
+                    
+                    position: absolute;
+                    
+                    top: 50%;
+                    left: 50%;
+                    
+                    transform-origin: left center;
+                    
+                    transform: translate(-50%, -50%) rotateY(90deg);
+                }
+
+                #fb-icon {
+
+                    transition: $fb-transition;
+                    
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                        
+                    height: 100%;
+
+                    border-radius: 4px;    
+                }
+            }
+            
+            #fbar:hover {
+                
+                #fb-label {
+                    
+                    transform: translate(-50%, -50%) rotateY(90deg);
+                }
+                
+                #fb-link {
+                    
+                    transform: translate(-50%, -50%);
+                }
+                
+                #fb-icon {
+                    
+                    transition: $fb-transition;
+                    
+                    left: 100%;
+                    
+                    transform: translateX(-100%);
+                }
+            }
+        }
+    }
+}
+
+@font-face {
+    
+    font-family: "Pixel Font";
+    src: url("fonts/PixelOperator.ttf");
+}
+
+@font-face {
+    
+    font-family: "DP Comic";
+    src: url("fonts/dpcomic.ttf");
+}
+
+@font-face {
+    
+    font-family: "Husky Stash";
+    src: url("fonts/huskystash.ttf");
+}
+
+.bold {
+    
+    font-weight: bold;
+}
+
+.italic {
+    
+    font-style: italic;
+}
+
+.highlight {
+    
+    font-weight: bold;
+    font-style: italic;
+}
+
+.text-outlined {
+    
+    text-shadow: 
+        1px 0 black,
+        -1px 0 black,
+        0 1px black,
+        0 -1px black,
+        1px -1px black,
+        -1px -1px black,
+        -1px 1px black,
+        1px 1px black;
+}
+
+.parallax {
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#email {
+    
+    font-size: 2.25em;
+    
+    white-space: nowrap;
+
+    position: relative;
+
+    display: inline;
+
+    #emailleftspace,
+    #emailrightspace {
+
+        visibility: hidden;
+    }
+
+    #emailleft {
+
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        opacity: 0;
+
+        transition: $email-transition;
+    }
+
+    #emailright {
+
+        position: absolute;
+
+        top: 0;
+        right: 0;
+
+        opacity: 0;
+
+        transition: $email-transition;
+    }
+
+    #emailmiddle {
+
+        position: relative;
+
+        color: white;
+        
+        transition: $email-transition;
+    }
+
+    #emailmiddle:before {
+
+        content: "em";
+
+        position: absolute;
+        right: 100%;
+
+        color: black;
+        
+        opacity: 1;
+
+        transition: $email-transition;
+    }
+
+    #emailmiddle:after {
+
+        content: "il";
+
+        position: absolute;
+        left: 100%;
+
+        color: black;
+        
+        opacity: 1;
+
+        transition: $email-transition;
+    }
+}
+
+#email:hover {
+
+    #emailright {
+
+        opacity: 1;
+    }
+
+    #emailleft {
+
+        opacity: 1;
+    }
+
+    #emailmiddle:before {
+
+        opacity: 0;
+    }
+
+    #emailmiddle:after {
+
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .coolbutton {
+
+        font-size: 0.8em;
+
+        width: 225px;
+    }
+    
+    #email {
+        
+        font-size: 1.25em;
+    }
+    
+    #gamesection {
+
+        #gamereel-container {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            #gamereel {
+
+                #gamereelimg-container {
+
+                    width: 250px;
+                    height: 250px;
+                }    
+            }
+        }
+    }
+    
+    #artsection {
+        
+        #artscene {
+            
+            #artball {
+                
+                height: 125px;
+                width: 125px;
+            }
+            
+            .movebutton {
+                
+                width: 100px;
+                
+                font-size: 0.69em;
+                bottom: 0;
+            }
+        }
+    }
+    
+    #aboutpage {
+        
+        .dialogue {
+            
+            .portrait {
+                
+                width: 100px;
+                height: 100px;
+            }
+            
+            .actualdesc {
+                
+                .descname {
+                    
+                    font-size: 1.5em;
+                }
+                
+                .descpacito {
+                    
+                    font-size: 1em;
+                }
+            }
+        }
+        
+        .smalldialogue {
+            
+            font-size: 1em;
+        }
+        
+        #schoolsegment {
+            
+            #schooldesc {
+                
+                #schoolcontent {
+                    
+                    grid-template-areas:
+                        "lvlup lvlup"
+                        "char skills";
+                    
+                    #skills {
+                
+                        #skill-label {
+
+                            font-size: 1.25em;
+                        }
+
+                        .skill {
+
+                            font-size: 1em;
+                        }
+                    }       
+                }
+            }
+        }
+        
+        #expsegment {
+            
+            #expdesc {
+                
+                #expbar {
+                    
+                    height: 12px;
+                    
+                    border: 2px solid black;
+                    padding: 3px;
+                    
+                    .expmark {
+                        
+                        width: 6px;
+                    }
+                }
+            }
+        }
+        
+        #compsegment {
+            
+            #compdesc {
+                
+                #medals {
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .comppanel:nth-child(1) {
+                        
+                        order: -1;
+                    }
+                    
+                    .comppanel {
+                        
+                        min-width: 350px;
+                        
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: 125px;
+
+                        justify-items: center;
+                        align-items: center;
+
+                        border: 8px solid sandybrown;
+                        
+                        width: auto;
+                        
+                        margin-bottom: 10px;
+                        
+                        .medal {
+                            
+                            height: 85px;
+                            width: 85px;
+                            
+                            font-size: 1.75em;
+                            
+                            border-width: 12.5px;
+                        }
+                        
+                        .compinfo {
+                            
+                            font-size: 1.75em;
+                        }
+                        
+                        #goldmedal {
+                            
+                            height: 100px;
+                            width: 100px;
+                            
+                            font-size: 2.25em;
+                        }
+                        
+                        #bronzemedal {
+                            
+                            height: 75px;
+                            width: 75px;
+                            
+                            font-size: 1.5em;
+                        }
+                    }
+                }
+                
+                #certs {
+                    
+                    padding: 0;
+                    
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto auto;
+                }
+            }
+        }
+    }
+    
+    #artpage {
+        
+        #art-compilation {
+            
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+                "pug spidey spidey"
+                "ball spidey spidey"
+                "pizza pizza sushi"
+                "pizza pizza capt";
+        }
+    }
+    
+    #gamepage {
+        
+        #gamereel-container {
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            #gamereel {
+                
+                margin: 0;
+                
+                #play-button {
+                    
+                    p {
+                        
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    
+    #contactpage {
+        
+        #contacts {
+            
+            grid-template-areas:
+                "phone"
+                "email"
+                "fb";
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    #navbar-container {
+        
+        #navbar {
+
+            display: none;
+            -webkit-display: none;
+        }
+        
+        #navsandwich {
+            
+            display: inline;
+            -webkit-display: inline;
+        }
+    }
+    
+    #footer {
+        
+        font-size: 0.75em;
+    }
+    
+    #slideshow {
+        
+        #slide-buttons {
+            
+            .slide-skip {
+                
+                margin: 0 15px 0 15px;
+                transform: scale(3);
+            }
+            
+            .slide-button {
+                
+                margin: 0 10px 0 10px;
+            }
+        }
+        
+        #slideshowtext {
+            
+            #name {
+                
+                font-size: 2.5em;
+            }
+            
+            #title {
+                
+                font-size: 1.125em;
+            }
+            
+            #aboutmebutton {
+                
+                font-size: 0.9em;
+                
+                height: 40px;
+                width: 125px;
+            }
+        }
+    }
+    
+    #artsection {
+        
+        #artscene {
+            
+            align-items: flex-start;
+            
+            #artball {
+                
+                bottom: 20px;
+            }
+        }
+    }
+    
+    #contactsection {
+        
+        #email-container {
+            
+            margin: 5px 0 5px 0;
+            padding: 10px;
+
+            border-top: 3px solid black;
+            border-bottom: 3px solid black;
+        }
+    }
+    
+    #email {
+        
+        font-size: 0.8em;
+    }
+    
+    .page {
+        
+        .pageheader {
+            
+            font-size: 2em;
+
+            #pageheadersub {
+                
+                margin-top: 7px;
+                
+                font-size: 0.275em;
+            }
+        }
+
+        .pageheader:after {
+
+            width: 150px;
+        }
+    }
+    
+    #aboutpage {
+        
+        .dialogue {
+            
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+            
+            justify-items: center;
+        }
+        
+        .segmentbg {
+            
+            height: 250px;
+        }
+        
+        #mesegment {
+            
+            #testimonial-label {
+                
+                text-align: center;
+            }
+        }
+        
+        #schoolsegment {
+            
+            #schooldesc {
+                
+                #schoolcontent {
+                    
+                    grid-template-areas:
+                        "lvlup"
+                        "char"
+                        "skills";
+                }
+            }
+        }
+        
+        #expsegment {
+            
+            #expdesc {
+                
+                #expbar {
+                    
+                    height: 7.5px;
+                    
+                    border: 1px solid black;
+                    padding: 3px;
+                    
+                    .expmark {
+                        
+                        width: 6px;
+                    }
+                }
+                
+                
+                #expdetails {
+                    
+                    min-height: 200px;
+                    
+                    #expoverlay {
+                        
+                        p {
+                            
+                            font-size: 1.5em;
+                        }
+                    }
+                    
+                    #exptitle {
+                    
+                        font-size: 1.25em;
+                        font-style: bold;
+                    }
+
+                    #expplace {
+
+                        font-size: 0.85em;
+                        font-style: italic;
+                    }
+
+                    #expdate {
+
+                        font-size: 0.65em;
+                    }
+
+                    #expinfo {
+
+                        font-size: 0.9em;
+
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+        
+        #compsegment {
+            
+            #compdesc {
+                
+                #medals {
+                    
+                    .comppanel {
+                    
+                        width: 75%;
+                        
+                        min-width: 0;
+                        
+                        grid-template-rows: 100px;
+                        
+                        .compinfo {
+
+                            font-size: 1em;
+                        }
+
+                        .medal {
+
+                            height: 60px;
+                            width: 60px;
+                            
+                            font-size: 1.5em
+                        }
+
+                        #goldmedal {
+
+                            height: 70px;
+                            width: 70px;
+                            
+                            font-size: 1.75em;
+                        }
+
+                        #bronzemedal {
+
+                            height: 55px;
+                            width: 55px;
+                            
+                            font-size: 1.25em;
+                        }
+                    }
+                }
+                
+                #certs {
+                    
+                    padding: 0;
+                    
+                    .cert {
+                        
+                        width: 160px;
+                        height: 40px;
+                        
+                        border: 16px double black;
+                        
+                        .certtitle {
+                            
+                            font-size: 1.5em;
+                        }
+                        
+                        .certdetails {
+                            
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    #gamepage {
+        
+        #gamereel-container {
+            
+            #gamereel {
+                
+                #play-button {
+                    
+                    justify-content: center;
+                }
+                
+                .reelmove {
+                    
+                    z-index: 10;
+                    transform: translateY(-50%) scaleX(1.25) scaleY(2);
+                    
+                    padding: 5px;
+                    background: rgba(0,0,0,0.25);
+                    
+                }
+                
+                #reelleft {
+                    
+                    left: 0;
+                    right: auto;
+                }
+                
+                #reelright {
+                    
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+        
+        #game-details {
+                
+            padding: 25px;
+            padding-top: 10px;
+            
+            #game-name {
+
+                text-align: center;
+                
+                font-size: 1.5em;
+            }
+
+            #game-mentions {
+
+                text-align: center;
+                
+                font-size: 1em;
+            }
+            
+            #game-info {
+                
+                font-size: 1.125em;
+            }
+        }
+    }
+    
+    #contactpage {
+        
+        #contacts {
+            
+            #email-container {
+                
+                #email {
+                    
+                    font-size: 1.25em;
+                }
+            }
+            
+            #fbar-container {
+                
+                #fbar {
+                    
+                    padding: 5px 40px 5px 40px;
+                    
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
