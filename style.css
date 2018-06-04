@@ -840,6 +840,27 @@ a {
   z-index: 1;
   opacity: 0;
 }
+#gamepage #gamereel-container #gamereel .reelitem:nth-child(1) {
+  transform: translateX(0px);
+}
+#gamepage #gamereel-container #gamereel .reelitem:nth-child(2) {
+  transform: translateX(300px);
+}
+#gamepage #gamereel-container #gamereel .reelitem:nth-child(3) {
+  transform: translateX(600px);
+}
+#gamepage #gamereel-container #gamereel .reelitem:nth-child(4) {
+  transform: translateX(900px);
+}
+#gamepage #gamereel-container #gamereel .reelitem:nth-child(5) {
+  transform: translateX(1200px);
+}
+#gamepage #gamereel-container #gamereel .reelitem:nth-child(6) {
+  transform: translateX(1500px);
+}
+#gamepage #gamereel-container #gamereel .reelitem:nth-child(7) {
+  transform: translateX(1800px);
+}
 #gamepage #gamereel-container #gamereel .reelmove {
   position: absolute;
   top: 50%;
