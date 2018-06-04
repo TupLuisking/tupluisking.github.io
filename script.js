@@ -2,6 +2,8 @@ console.log("SCRIPT IMPORTED");
 
 var slideshow;
 
+AdjustGameReel();
+
 window.onload = function() {
     
     console.log("WINDOW LOADED");
@@ -13,9 +15,9 @@ window.onload = function() {
         ChangeSlideSkip(1);
     }, 4000);
     
-    var gamereel = document.getElementById("gamereel");
+    var gamedetails = document.getElementById("game-details");
     
-    if(gamereel != null) {
+    if(gamedetails != null) {
         
         AdjustGameReel();
     }
@@ -494,6 +496,11 @@ var gameDetails = [
 ];
 
 function AdjustGameReel() {
+    
+    var gamereel = document.getElementById("gamereel");
+    
+    if(gamereel == null)
+        return;
     
     var reelitems = document.getElementsByClassName("reelitem");
     
