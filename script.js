@@ -2,8 +2,6 @@ console.log("SCRIPT IMPORTED");
 
 var slideshow;
 
-AdjustGameReel();
-
 window.onload = function() {
     
     console.log("WINDOW LOADED");
@@ -496,6 +494,8 @@ var gameDetails = [
 ];
 
 function AdjustGameReel() {
+    
+    console.log("ADJUSTING GAME REEL");
     
     var gamereel = document.getElementById("gamereel");
     
