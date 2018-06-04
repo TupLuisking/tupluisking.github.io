@@ -914,7 +914,7 @@ a {
   opacity: 0;
 }
 #artpage #art-compilation .art-panel .art-name {
-  font-size: 1.25em;
+  font-size: 3vw;
   font-weight: bold;
   position: absolute;
   bottom: 10px;
