@@ -34,6 +34,7 @@ a {
 #navbar-container #navbar-logo {
   height: 69%;
   margin-left: 20px;
+  cursor: pointer;
 }
 #navbar-container #navbar-logo img {
   height: 100%;
@@ -393,12 +394,12 @@ a {
   border-top: 1px solid white;
   background: black;
   color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   font-size: 1em;
 }
 #footer #footerleft {
+  justify-self: start;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -409,7 +410,16 @@ a {
   text-decoration: none;
   margin-bottom: 5px;
 }
+#footer #footermiddle {
+  justify-self: center;
+  font-size: 4.20vw;
+}
+#footer #footermiddle a {
+  color: black;
+  text-decoration: none;
+}
 #footer #footerright {
+  justify-self: end;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -550,7 +560,7 @@ a {
 }
 #aboutpage #schoolsegment #schoolcontent {
   display: grid;
-  grid-template-areas: "lvlup skills skills skills" "char skills skills skills";
+  grid-template-areas: "lvlup skills skills" "char skills skills";
   grid-gap: 20px;
   justify-items: start;
 }
@@ -563,6 +573,42 @@ a {
 }
 #aboutpage #schoolsegment #schoolcontent #lvlup #lvlup-label {
   color: white;
+  animation-name: rainbow;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+#aboutpage #schoolsegment #schoolcontent #lvlup #lvlup-label:hover {
+  animation-name: rainbow;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: green;
+  }
+  56% {
+    color: blue;
+  }
+  70% {
+    color: indigo;
+  }
+  84% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
 }
 #aboutpage #schoolsegment #schoolcontent #lvlup #lvlup-school {
   font-size: 0.75em;
@@ -1125,6 +1171,13 @@ a {
   transition: 0.5s;
   left: 100%;
   transform: translateX(-100%);
+}
+
+#secretpage {
+  background: #a18c76;
+}
+#secretpage .secretsection {
+  margin-top: 25px;
 }
 
 @font-face {

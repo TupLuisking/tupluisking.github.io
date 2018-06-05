@@ -75,6 +75,8 @@ a {
         
         margin-left: 20px;
         
+        cursor: pointer;
+        
         img {
             
             height: 100%;
@@ -639,13 +641,14 @@ a {
     background: black;
     color: white;
     
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     
     font-size: 1em;
     
     #footerleft {
+        
+        justify-self: start;
         
         display: flex;
         flex-direction: column;
@@ -661,7 +664,22 @@ a {
         }
     }
 
+    #footermiddle {
+        
+        justify-self: center;
+        
+        font-size: 4.20vw;
+        
+        a {
+            
+            color: black;
+            text-decoration: none;
+        }
+    }
+    
     #footerright {
+        
+        justify-self: end;
         
         display: flex;
         flex-direction: column;
@@ -900,8 +918,8 @@ a {
             
             display: grid;
             grid-template-areas:
-                "lvlup skills skills skills"
-                "char skills skills skills";
+                "lvlup skills skills"
+                "char skills skills";
             grid-gap: 20px;
             
             justify-items: start;
@@ -921,6 +939,31 @@ a {
                 #lvlup-label {
                     
                     color: white;
+                    
+                    animation-name: rainbow;
+                    animation-duration: 3s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: infinite;
+                }
+                
+                #lvlup-label:hover {
+                    
+                    animation-name: rainbow;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: infinite;
+                }
+                
+                @keyframes rainbow {
+                    
+                    0% {color: red;}
+                    14% {color: orange;}
+                    28% {color: yellow;}
+                    42% {color: green;}
+                    56% {color: blue;}
+                    70% {color: indigo;}
+                    84% {color: violet;}
+                    100% {color: red;}
                 }
                 
                 #lvlup-title {
@@ -2011,6 +2054,16 @@ a {
                 }
             }
         }
+    }
+}
+
+#secretpage {
+    
+    background: $dirt;
+    
+    .secretsection {
+        
+        margin-top: 25px;
     }
 }
 
