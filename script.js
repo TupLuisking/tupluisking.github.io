@@ -559,3 +559,20 @@ function OpenGame() {
     
     window.open(badGames[startingIndex]);
 }
+
+// MEME MODAL
+
+function OpenMeme(element) {
+    
+    var memeModal = document.getElementById("meme-modal");
+    var memeContainer = document.getElementById("meme-container");
+    
+    memeContainer.style.backgroundImage = "url(" + element.src + ")";
+    memeModal.style.transform = "translateY(0)";
+}
+
+function CloseMeme() {
+    
+    var memeModal = document.getElementById("meme-modal");
+    memeModal.style.transform = "translateY(-100%)";
+}

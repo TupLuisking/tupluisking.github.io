@@ -925,10 +925,6 @@ a {
   cursor: pointer;
   color: white;
   font-weight: bold;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 #gamepage #gamereel-container #gamereel #reelleft {
   right: 101%;
@@ -1176,8 +1172,123 @@ a {
 #secretpage {
   background: #a18c76;
 }
+#secretpage .pageheader {
+  margin-bottom: 25px;
+}
+#secretpage #meme-modal {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.5s;
+  transform: translateY(-100%);
+}
+#secretpage #meme-modal #meme-modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.42);
+}
+#secretpage #meme-modal #meme-container {
+  height: 75vh;
+  width: 75vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 15;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.42);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#secretpage #meme-modal #meme-container #meme-modal-close {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  z-index: 6;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background: white;
+  color: white;
+  border: 5px double black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #secretpage .secretsection {
-  margin-top: 25px;
+  padding: 25px;
+}
+#secretpage .secretsection .secretsection-header {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#secretpage #secretsection-memes #meme-reel {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+#secretpage #secretsection-memes #meme-reel .meme-panel {
+  height: 125px;
+  width: 125px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px double black;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.42);
+  margin: 10px;
+}
+#secretpage #secretsection-memes #meme-reel .meme-panel img {
+  width: 100%;
+  height: auto;
+  transition: 0.5s;
+}
+#secretpage #secretsection-memes #meme-reel .meme-panel img:hover {
+  transform: scale(1.25);
+}
+#secretpage #secretsection-sites #secret-sites {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+#secretpage #secretsection-sites #secret-sites .secret-site {
+  color: white;
+  text-decoration: none;
+  font-size: 2.5em;
+}
+#secretpage #secretsection-sites #secret-sites .secret-site:hover {
+  text-shadow: 1px 0 black, -1px 0 black, 0 1px black, 0 -1px black, 1px -1px black, -1px -1px black, -1px 1px black, 1px 1px black;
+}
+#secretpage #secretsection-sites #secret-sites .secret-site:before {
+  content: " ";
+  margin-right: 7.5px;
+}
+#secretpage #secretsection-sites #secret-sites .secret-site:nth-child(1):before {
+  content: "-";
+}
+#secretpage #secretsection-sites #secret-sites .secret-site:after {
+  content: "-";
+  margin-left: 7.5px;
+}
+#secretpage #secretsection-sites #secret-sites .secret-site:hover:before,
+#secretpage #secretsection-sites #secret-sites .secret-site:hover:after {
+  color: white;
+  text-shadow: none;
 }
 
 @font-face {
@@ -1207,6 +1318,13 @@ a {
 
 .text-outlined {
   text-shadow: 1px 0 black, -1px 0 black, 0 1px black, 0 -1px black, 1px -1px black, -1px -1px black, -1px 1px black, 1px 1px black;
+}
+
+.unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .parallax {
@@ -1403,6 +1521,10 @@ a {
   #contactpage #contacts {
     grid-template-areas: "phone" "email" "fb";
   }
+
+  #secretpage #secretsection-sites #secret-sites .secret-site {
+    font-size: 2em;
+  }
 }
 @media only screen and (max-width: 500px) {
   #navbar-container #navbar {
@@ -1587,6 +1709,10 @@ a {
   #contactpage #contacts #fbar-container #fbar {
     padding: 5px 40px 5px 40px;
     font-size: 1em;
+  }
+
+  #secretpage #secretsection-sites #secret-sites .secret-site {
+    font-size: 1.5em;
   }
 }
 
