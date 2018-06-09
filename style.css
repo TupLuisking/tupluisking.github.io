@@ -347,14 +347,23 @@ a {
   align-items: center;
 }
 #artsection #artscene #artball {
-  background-image: url("images/art/CUTE%20BALL%20Idle.gif");
-  background-size: contain;
   height: 200px;
   width: 200px;
   position: absolute;
   left: 20%;
   z-index: 1;
   transform: translate(-50%);
+}
+#artsection #artscene #artball img {
+  height: 100%;
+  width: auto;
+  position: absolute;
+}
+#artsection #artscene #artball #artball-idle {
+  opacity: 1;
+}
+#artsection #artscene #artball #artball-rolling {
+  opacity: 0;
 }
 #artsection #artscene .movebutton {
   position: absolute;

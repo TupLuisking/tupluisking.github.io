@@ -567,9 +567,6 @@ a {
         
         #artball {
             
-            background-image: url("images/art/CUTE%20BALL%20Idle.gif");
-            background-size: contain;
-            
             height: 200px;
             width: 200px;
             
@@ -579,6 +576,24 @@ a {
             z-index: 1;
             
             transform: translate(-50%);
+            
+            img {
+                
+                height: 100%;
+                width: auto;
+                
+                position: absolute;
+            }
+            
+            #artball-idle {
+                
+                opacity: 1;
+            }
+            
+            #artball-rolling {
+                
+                opacity: 0;
+            }
         }
         
         .movebutton {

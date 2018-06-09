@@ -317,9 +317,9 @@ function MoveRight() {
     if(movingRight || movingLeft)
         return;
     
-    var artball = document.getElementById("artball");
+    document.getElementById("artball-idle").style.opacity = "0";
+    document.getElementById("artball-rolling").style.opacity = "1";
     
-    artball.style.backgroundImage = 'url("images/art/CUTE%20BALL%20Rolling.gif")';
     movingRight = true;
 }
 
@@ -328,25 +328,25 @@ function MoveLeft() {
     if(movingRight || movingLeft)
         return;
     
-    var artball = document.getElementById("artball");
+    document.getElementById("artball-idle").style.opacity = "0";
+    document.getElementById("artball-rolling").style.opacity = "1";
     
-    artball.style.backgroundImage = 'url("images/art/CUTE%20BALL%20Rolling.gif")';
     movingLeft = true;
 }
 
 function StopRight() {
     
-    var artball = document.getElementById("artball");
+    document.getElementById("artball-idle").style.opacity = "1";
+    document.getElementById("artball-rolling").style.opacity = "0";
     
-    artball.style.backgroundImage = 'url("images/art/CUTE%20BALL%20Idle.gif")';
     movingRight = false;
 }
 
 function StopLeft() {
     
-    var artball = document.getElementById("artball");
+    document.getElementById("artball-idle").style.opacity = "1";
+    document.getElementById("artball-rolling").style.opacity = "0";
     
-    artball.style.backgroundImage = 'url("images/art/CUTE%20BALL%20Idle.gif")';
     movingLeft = false;
 }
 
