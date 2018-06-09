@@ -1137,26 +1137,33 @@ a {
 }
 #contactpage #contacts #fbar-container #fbar #fb-label {
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   transition: 0.5s;
   position: absolute;
   top: 50%;
-  left: 50%;
+  right: 0;
   transform-origin: right center;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+  opacity: 1;
 }
 #contactpage #contacts #fbar-container #fbar #fb-link-space {
   opacity: 0;
 }
 #contactpage #contacts #fbar-container #fbar #fb-link {
+  cursor: pointer;
   width: 100%;
+  max-width: 0;
+  overflow: hidden;
   color: black;
   text-decoration: none;
   transition: 0.5s;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 0;
   transform-origin: left center;
-  transform: translate(-50%, -50%) rotateY(90deg);
+  transform: translateY(-50%);
+  opacity: 0;
 }
 #contactpage #contacts #fbar-container #fbar #fb-icon {
   transition: 0.5s;
@@ -1167,15 +1174,17 @@ a {
   border-radius: 4px;
 }
 #contactpage #contacts #fbar-container #fbar:hover #fb-label {
-  transform: translate(-50%, -50%) rotateY(90deg);
+  max-width: 0;
+  opacity: 0;
 }
 #contactpage #contacts #fbar-container #fbar:hover #fb-link {
-  transform: translate(-50%, -50%);
+  max-width: 100%;
+  opacity: 1;
 }
 #contactpage #contacts #fbar-container #fbar:hover #fb-icon {
   transition: 0.5s;
   left: 100%;
-  transform: translateX(-100%);
+  transform: translateX(-99%);
 }
 
 #secretpage {

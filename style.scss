@@ -1990,17 +1990,22 @@ a {
                 #fb-label {
 
                     width: 100%;
+                    max-width: 100%;
+                    
+                    overflow: hidden;
                     
                     transition: $fb-transition;
                     
                     position: absolute;
                     
                     top: 50%;
-                    left: 50%;
+                    right: 0;
                     
                     transform-origin: right center;
                     
-                    transform: translate(-50%, -50%);// rotateY(90deg);
+                    transform: translateY(-50%);// rotateY(90deg);      
+                    
+                    opacity: 1;
                 }
 
                 #fb-link-space {
@@ -2010,7 +2015,12 @@ a {
 
                 #fb-link {
 
+                    cursor: pointer;
+                    
                     width: 100%;
+                    max-width: 0;
+                    
+                    overflow: hidden;
                     
                     color: black;
                     
@@ -2021,11 +2031,13 @@ a {
                     position: absolute;
                     
                     top: 50%;
-                    left: 50%;
+                    left: 0;
                     
                     transform-origin: left center;
                     
-                    transform: translate(-50%, -50%) rotateY(90deg);
+                    transform: translateY(-50%);
+                    
+                    opacity: 0;
                 }
 
                 #fb-icon {
@@ -2046,12 +2058,14 @@ a {
                 
                 #fb-label {
                     
-                    transform: translate(-50%, -50%) rotateY(90deg);
+                    max-width: 0;
+                    opacity: 0;
                 }
                 
                 #fb-link {
                     
-                    transform: translate(-50%, -50%);
+                    max-width: 100%;
+                    opacity: 1;
                 }
                 
                 #fb-icon {
@@ -2060,7 +2074,7 @@ a {
                     
                     left: 100%;
                     
-                    transform: translateX(-100%);
+                    transform: translateX(-99%);
                 }
             }
         }
