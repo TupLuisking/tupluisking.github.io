@@ -668,7 +668,7 @@ a {
 }
 #aboutpage #expsegment #expdesc #expbar .expmark {
   height: 150%;
-  width: 8px;
+  width: 10px;
   background: black;
   border-radius: 25px;
   border: 2px solid white;
@@ -1461,7 +1461,7 @@ a {
     padding: 3px;
   }
   #aboutpage #expsegment #expdesc #expbar .expmark {
-    width: 6px;
+    width: 8px;
   }
   #aboutpage #compsegment #compdesc #medals {
     display: flex;
