@@ -2163,7 +2163,7 @@ a {
     
     .secretsection {
         
-        padding: 25px;
+        padding: 10px 25px 10px 25px;
         
         .secretsection-header {
             
@@ -2171,6 +2171,18 @@ a {
             font-weight: bold;
             
             margin-bottom: 10px;
+        }
+        
+        .secretsection-sub {
+            
+            font-size: 1.125em;
+            
+            margin-bottom: 10px;
+        }
+        
+        .secretsection-sub:before {
+            
+            content: "> ";
         }
     }
     
@@ -2186,6 +2198,8 @@ a {
             
             .meme-panel {
 
+                cursor: pointer;
+                
                 height: 125px;
                 width: 125px;
                 

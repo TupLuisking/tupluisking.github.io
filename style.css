@@ -1243,12 +1243,19 @@ a {
   align-items: center;
 }
 #secretpage .secretsection {
-  padding: 25px;
+  padding: 10px 25px 10px 25px;
 }
 #secretpage .secretsection .secretsection-header {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 10px;
+}
+#secretpage .secretsection .secretsection-sub {
+  font-size: 1.125em;
+  margin-bottom: 10px;
+}
+#secretpage .secretsection .secretsection-sub:before {
+  content: "> ";
 }
 #secretpage #secretsection-memes #meme-reel {
   display: flex;
@@ -1258,6 +1265,7 @@ a {
   align-content: center;
 }
 #secretpage #secretsection-memes #meme-reel .meme-panel {
+  cursor: pointer;
   height: 125px;
   width: 125px;
   overflow: hidden;
