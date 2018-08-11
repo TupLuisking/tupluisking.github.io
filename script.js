@@ -466,7 +466,7 @@ var gameDetails = [
     
     "Global Game Job" + "|" +
     "Top 5 Games • Judge's Choice" + "|" +
-    "Global Game Job was my team, <span class=bold>Bandila Games'</span> entry for Global Game Jam 2018 @ FEU Tech. You play as an I.T. professional managing the bandwidth for teams participating in the game jam within the game. This game won two awards and was featured in GameConPH 2018.",
+    "Global Game Job was my team, <a class='bold black italic' href='https://www.facebook.com/bandilagames/' target='_blank' > Bandila Games</a>' entry for Global Game Jam 2018 @ FEU Tech. You play as an I.T. professional managing the bandwidth for teams participating in the game jam within the game. This game won two awards and was featured in GameConPH 2018.",
     
     "Petered Out" + "|" +
     "People's Choice Award" + "|" +
