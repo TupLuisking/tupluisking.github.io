@@ -362,7 +362,7 @@ var exps = [
     
     "Senior Game Developer/Computer Society of the Ateneo/2017 - 2018/I taught game development with Unity to the other members of the organization.",
     
-    "Game Developer/Monstronauts/PRESENT/I'm currently working on Monstronauts' new game, OreBits, which is coming out soon. ;)"
+    "Game Developer/Monstronauts/2018 - PRESENT/I'm currently working on Monstronauts' new game, OreBits, which is coming out soon. ;)"
 ];
 
 function ShowExp(index) {
