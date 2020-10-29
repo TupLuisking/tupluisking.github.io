@@ -34,7 +34,7 @@ window.onload = function ()
 	isHomePage = (window.location.pathname === "/");
 
 	var wScroll = $(this).scrollTop();
-	updateNavbar(wScroll);
+	UpdateNavbar(wScroll);
 
 	gameDetailsSection = $('.game-details-section');
 	gameGalleryItems = document.getElementsByClassName("games-gallery-item");
@@ -50,7 +50,7 @@ window.onload = function ()
 $(window).scroll(function ()
 {
 	var wScroll = $(this).scrollTop();
-	updateNavbar(wScroll);
+	UpdateNavbar(wScroll);
 });
 
 function test()
@@ -58,13 +58,13 @@ function test()
 	console.log("TEST");
 }
 
-function updateNavbar(wScroll)
+function UpdateNavbar(wScroll)
 {
 	if (navbar === null)
 		return;
 
 	var simple = isHomePage && wScroll < navbarHeight * 3;
-
+	
 	if (isHomePage)
 	{
 		navbar.css("transition-duration", navbarTransitionDuration);
@@ -154,4 +154,36 @@ function RevalidateBurgerMenu()
 	var checked = $(".navbar-burger-toggle").prop("checked");
 	
 	navbarBurgerLinksContainer.css("max-height", checked ? "400px" : "0px");
+}
+
+function InitializeWindow()
+{
+	setTimeout(
+		function ()
+		{
+			navbar = $(".navbar");
+			navbarLogoContainer = $(".navbar-logo-container");
+			navbarHeight = navbar.height();
+			navbarLinks = document.getElementsByClassName("navbar-link");
+			navbarBurgerSticks = document.getElementsByClassName("navbar-burger-stick");
+			navbarBurgerLinksContainer = $(".navbar-burger-links-container");
+			navbarTransitionDuration = "0.69s";
+
+			isHomePage = (window.location.pathname === "/");
+
+			var wScroll = $(this).scrollTop();
+			UpdateNavbar(wScroll);
+
+			gameDetailsSection = $('.game-details-section');
+			gameGalleryItems = document.getElementsByClassName("games-gallery-item");
+			if (gameGalleryItems !== null && gameGalleryItems.length !== 0)
+			{
+				gameGalleryItemWidth = gameGalleryItems[0].offsetWidth;
+				gameGalleryItemGap = gameGalleryItemWidth * 0.1;
+			}
+
+			AdjustGameGallery(0);
+		},
+		2
+	)
 }
