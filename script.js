@@ -23,28 +23,7 @@ var gameDetailsAnimationDuration = 0.125 * 1000;
 
 window.onload = function ()
 {
-	navbar = $(".navbar");
-	navbarLogoContainer = $(".navbar-logo-container");
-	navbarHeight = navbar.height();
-	navbarLinks = document.getElementsByClassName("navbar-link");
-	navbarBurgerSticks = document.getElementsByClassName("navbar-burger-stick");
-	navbarBurgerLinksContainer = $(".navbar-burger-links-container");
-	navbarTransitionDuration = "0.69s";
-
-	isHomePage = (window.location.pathname === "/");
-
-	var wScroll = $(this).scrollTop();
-	UpdateNavbar(wScroll);
-
-	gameDetailsSection = $('.game-details-section');
-	gameGalleryItems = document.getElementsByClassName("games-gallery-item");
-	if (gameGalleryItems !== null && gameGalleryItems.length !== 0)
-	{
-		gameGalleryItemWidth = gameGalleryItems[0].offsetWidth;
-		gameGalleryItemGap = gameGalleryItemWidth * 0.1;
-	}
-
-	AdjustGameGallery(0);
+	InitializeWindow();
 }
 
 $(window).scroll(function ()
@@ -53,9 +32,12 @@ $(window).scroll(function ()
 	UpdateNavbar(wScroll);
 });
 
-function test()
+var testCounter = 0;
+
+function Test()
 {
-	console.log("TEST");
+	console.log("TEST " + testCounter);
+	testCounter++;
 }
 
 function UpdateNavbar(wScroll)
@@ -156,34 +138,44 @@ function RevalidateBurgerMenu()
 	navbarBurgerLinksContainer.css("max-height", checked ? "400px" : "0px");
 }
 
-function InitializeWindow()
+function ReinitializeWindow()
 {
 	setTimeout(
 		function ()
 		{
-			navbar = $(".navbar");
-			navbarLogoContainer = $(".navbar-logo-container");
-			navbarHeight = navbar.height();
-			navbarLinks = document.getElementsByClassName("navbar-link");
-			navbarBurgerSticks = document.getElementsByClassName("navbar-burger-stick");
-			navbarBurgerLinksContainer = $(".navbar-burger-links-container");
-			navbarTransitionDuration = "0.69s";
-
-			isHomePage = (window.location.pathname === "/");
-
-			var wScroll = $(this).scrollTop();
-			UpdateNavbar(wScroll);
-
-			gameDetailsSection = $('.game-details-section');
-			gameGalleryItems = document.getElementsByClassName("games-gallery-item");
-			if (gameGalleryItems !== null && gameGalleryItems.length !== 0)
-			{
-				gameGalleryItemWidth = gameGalleryItems[0].offsetWidth;
-				gameGalleryItemGap = gameGalleryItemWidth * 0.1;
-			}
-
-			AdjustGameGallery(0);
+			InitializeWindow();
 		},
 		2
 	)
+}
+
+function InitializeWindow()
+{
+	navbar = $(".navbar");
+	navbarLogoContainer = $(".navbar-logo-container");
+	navbarHeight = navbar.height();
+	navbarLinks = document.getElementsByClassName("navbar-link");
+	navbarBurgerSticks = document.getElementsByClassName("navbar-burger-stick");
+	navbarBurgerLinksContainer = $(".navbar-burger-links-container");
+	navbarTransitionDuration = "0.69s";
+
+	isHomePage = CheckHomePage();
+
+	var wScroll = $(this).scrollTop();
+	UpdateNavbar(wScroll);
+
+	gameDetailsSection = $('.game-details-section');
+	gameGalleryItems = document.getElementsByClassName("games-gallery-item");
+	if (gameGalleryItems !== null && gameGalleryItems.length !== 0)
+	{
+		gameGalleryItemWidth = gameGalleryItems[0].offsetWidth;
+		gameGalleryItemGap = gameGalleryItemWidth * 0.1;
+	}
+
+	AdjustGameGallery(0);
+}
+
+function CheckHomePage()
+{
+	return !window.location.href.includes("portfolio");
 }
